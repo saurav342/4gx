@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Growth & Performance Marketing | Scale Revenue, Not Just Ads</title>
+<meta name="description" content="Growth & Performance Marketer helping SaaS, D2C & B2B brands build predictable, scalable acquisition engines. $10M+ ad spend managed."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #fcfcfd; --text: #0a0a0b; --muted: #5f6368;
+    --accent: #4f46e5; --accent-l: #e0e7ff; --accent-h: #4338ca;
+    --surf: #ffffff; --surf-alt: #f3f4f6;
+    --border: rgba(0,0,0,0.08); --border-h: rgba(79,70,229,0.3);
+    --sh-sm: 0 4px 12px rgba(0,0,0,0.03);
+    --sh-lg: 0 20px 60px rgba(0,0,0,0.06);
+    --sh-ac: 0 20px 40px rgba(79,70,229,0.2);
+    --fd: 'Unbounded',sans-serif; --fb: 'Plus Jakarta Sans',sans-serif;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:var(--fb);overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased;}
+
+  .cursor{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:multiply;}
+  .cursor-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);position:absolute;transform:translate(-50%,-50%);transition:width .3s,height .3s;}
+  .cursor-ring{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--accent);position:absolute;transform:translate(-50%,-50%);transition:all .15s ease;opacity:.3;}
+  body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{transform:translate(-50%,-50%) scale(1.6);opacity:.8;}
+  body::before{content:'';position:fixed;inset:0;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(252,252,253,0.85);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid rgba(0,0,0,0.04);transition:all .4s ease;}
+  .nav-logo{font-family:var(--fd);font-size:20px;font-weight:900;letter-spacing:-.04em;color:var(--text);text-decoration:none;}
+  .nav-logo span{color:var(--accent);}
+  .nav-links{display:flex;gap:36px;align-items:center;}
+  .nav-links a{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.04em;text-transform:uppercase;transition:color .3s;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-cta{background:var(--text);color:var(--surf);padding:12px 28px;border-radius:100px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:var(--sh-sm);}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+
+  /* HERO */
+  .hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;align-items:center;padding:140px 48px 80px;position:relative;overflow:hidden;gap:60px;}
+  .orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.6;pointer-events:none;animation:orbF 10s ease-in-out infinite alternate;}
+  .o1{width:700px;height:700px;background:rgba(79,70,229,.15);top:-250px;right:-150px;}
+  .o2{width:500px;height:500px;background:rgba(56,189,248,.15);bottom:-150px;left:5%;animation-delay:-4s;}
+  .o3{width:400px;height:400px;background:rgba(236,72,153,.1);top:20%;right:30%;animation-delay:-2s;}
+  @keyframes orbF{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-50px,30px) scale(1.05)}}
+
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--surf);border:1px solid var(--border);padding:8px 18px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:32px;box-shadow:var(--sh-sm);animation:fadeUp .8s ease both;}
+  .hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+  .hero-title{font-family:var(--fd);font-size:clamp(44px,5.5vw,80px);font-weight:900;line-height:1.05;letter-spacing:-.04em;color:var(--text);animation:fadeUp .9s ease .15s both;}
+  .hero-title .ac{color:transparent;background:linear-gradient(135deg,var(--accent) 0%,#ec4899 100%);-webkit-background-clip:text;background-clip:text;}
+  .hero-title .it{font-style:italic;font-weight:300;color:var(--muted);}
+  .hero-sub{margin-top:28px;font-size:18px;line-height:1.7;color:var(--muted);font-weight:400;max-width:520px;animation:fadeUp 1s ease .3s both;}
+  .hero-proof{margin-top:24px;padding:20px 28px;background:var(--surf);border:1px solid var(--border);border-radius:16px;display:inline-flex;flex-wrap:wrap;gap:24px;animation:fadeUp 1s ease .4s both;box-shadow:var(--sh-sm);}
+  .proof-item{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--muted);}
+  .proof-item strong{font-family:var(--fd);font-size:15px;color:var(--text);font-weight:800;}
+  .proof-dot{width:4px;height:4px;border-radius:50%;background:var(--border-h);}
+  .hero-actions{margin-top:40px;display:flex;gap:20px;align-items:center;animation:fadeUp 1s ease .5s both;}
+  .btn-primary{background:var(--accent);color:white;padding:18px 40px;border-radius:100px;font-weight:700;font-size:14px;letter-spacing:.03em;text-decoration:none;text-transform:uppercase;transition:all .3s cubic-bezier(.25,.8,.25,1);box-shadow:var(--sh-ac);display:inline-flex;align-items:center;gap:10px;position:relative;overflow:hidden;}
+  .btn-primary::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease;}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 25px 50px rgba(79,70,229,.3);}
+  .btn-primary:hover::after{left:100%;}
+  .btn-ghost{color:var(--text);font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .3s;text-transform:uppercase;letter-spacing:.03em;}
+  .btn-ghost:hover{gap:14px;color:var(--accent);}
+
+  .hero-visual{position:relative;animation:fadeUp 1s ease .2s both;display:flex;flex-direction:column;gap:20px;z-index:10;}
+  .hero-card{background:rgba(255,255,255,.85);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:24px;padding:32px;position:relative;overflow:hidden;box-shadow:var(--sh-lg);}
+  .main-card{padding:44px;background:#fff;border:1px solid rgba(79,70,229,.15);}
+  .main-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(79,70,229,.05),transparent 70%);}
+  .card-label{position:relative;z-index:1;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+  .card-big-num{position:relative;z-index:1;font-family:var(--fd);font-size:60px;font-weight:900;letter-spacing:-.05em;color:var(--accent);line-height:1;}
+  .card-big-num small{font-size:26px;font-weight:400;color:var(--text);}
+  .card-desc{position:relative;z-index:1;font-size:14px;font-weight:500;color:var(--muted);margin-top:12px;line-height:1.6;}
+  .mini-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .mini-card{background:rgba(255,255,255,.9);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:var(--sh-sm);transition:transform .3s ease;}
+  .mini-card:hover{transform:translateY(-4px);}
+  .mini-card-icon{font-size:24px;margin-bottom:12px;}
+  .mini-card-val{font-family:var(--fd);font-size:24px;font-weight:800;letter-spacing:-.03em;color:var(--text);}
+  .mini-card-val span{color:var(--accent);}
+  .mini-card-label{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:4px;}
+  .floating-badge{position:absolute;background:var(--text);color:#fff;border-radius:100px;padding:10px 20px;font-size:12px;font-weight:700;top:-16px;right:40px;z-index:10;box-shadow:0 15px 30px rgba(0,0,0,.15);animation:badgeF 4s ease-in-out infinite;display:flex;align-items:center;gap:8px;}
+  .floating-badge::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#10b981;}
+  @keyframes badgeF{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+  /* MARQUEE */
+  .marquee-section{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 0;overflow:hidden;background:var(--surf-alt);}
+  .marquee-track{display:flex;gap:0;animation:marquee 30s linear infinite;width:max-content;}
+  .marquee-item{display:flex;align-items:center;gap:14px;padding:0 44px;white-space:nowrap;font-size:13px;font-family:var(--fd);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .marquee-dot{width:6px;height:6px;background:var(--accent);transform:rotate(45deg);}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* SECTIONS */
+  section{padding:120px 48px;position:relative;}
+  .section-tag{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:20px;background:var(--accent-l);padding:6px 16px;border-radius:100px;}
+  h2.section-title{font-family:var(--fd);font-size:clamp(36px,4.5vw,60px);font-weight:900;letter-spacing:-.04em;line-height:1.1;color:var(--text);}
+  h2.section-title .dim{color:var(--muted);font-weight:300;font-style:italic;}
+
+  /* SERVICES */
+  .services-bg{background:var(--surf-alt);}
+  .services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;flex-wrap:wrap;gap:24px;}
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .service-card{background:var(--surf);border:1px solid transparent;border-radius:24px;padding:44px;transition:all .4s cubic-bezier(.25,.8,.25,1);position:relative;overflow:hidden;box-shadow:var(--sh-sm);}
+  .service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;}
+  .service-card:hover{transform:translateY(-8px);border-color:var(--border-h);box-shadow:var(--sh-lg);}
+  .service-card:hover::after{transform:scaleX(1);}
+  .service-num{font-family:var(--fd);font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--muted);margin-bottom:24px;display:inline-block;padding:4px 12px;background:var(--surf-alt);border-radius:100px;}
+  .service-icon{width:60px;height:60px;border-radius:16px;background:var(--accent-l);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;transition:all .4s cubic-bezier(.34,1.56,.64,1);}
+  .service-card:hover .service-icon{background:var(--accent);color:#fff;transform:rotate(-5deg) scale(1.15);}
+  .service-name{font-family:var(--fd);font-size:17px;font-weight:800;letter-spacing:-.02em;margin-bottom:14px;color:var(--text);}
+  .service-desc{font-size:15px;line-height:1.7;color:var(--muted);font-weight:500;}
+  .service-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .service-tag{font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-l);padding:4px 12px;border-radius:100px;}
+
+  /* CASE STUDIES */
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:64px;}
+  .case-card{background:var(--surf);border:1px solid var(--border);border-radius:24px;padding:40px;transition:all .4s ease;box-shadow:var(--sh-sm);display:flex;flex-direction:column;}
+  .case-card:hover{transform:translateY(-8px);box-shadow:var(--sh-lg);border-color:var(--border-h);}
+  .case-tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:8px;}
+  .case-tag::before{content:'';display:block;width:20px;height:2px;background:var(--accent);}
+  .case-title{font-family:var(--fd);font-size:16px;font-weight:800;color:var(--text);margin-bottom:16px;letter-spacing:-.02em;}
+  .case-problem{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px;font-weight:500;}
+  .case-results{margin-top:auto;padding-top:20px;border-top:1px solid var(--border);}
+  .case-result-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--text);margin-top:10px;}
+  .case-result-item::before{content:'↗';color:var(--accent);font-weight:800;font-size:16px;}
+
+  /* WHY */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:0;}
+  .why-list{display:flex;flex-direction:column;gap:24px;margin-top:48px;}
+  .why-item{display:flex;gap:20px;align-items:flex-start;padding:28px;border:1px solid var(--border);border-radius:20px;background:var(--surf);transition:all .3s;box-shadow:var(--sh-sm);}
+  .why-item:hover{border-color:var(--border-h);transform:translateX(8px);}
+  .why-icon{width:48px;height:48px;min-width:48px;border-radius:14px;background:var(--accent-l);display:flex;align-items:center;justify-content:center;font-size:22px;}
+  .why-item-title{font-family:var(--fd);font-size:15px;font-weight:800;color:var(--text);margin-bottom:6px;letter-spacing:-.02em;}
+  .why-item-desc{font-size:14px;color:var(--muted);line-height:1.6;font-weight:500;}
+  .why-visual{background:var(--text);border-radius:32px;padding:48px;color:white;position:relative;overflow:hidden;}
+  .why-visual::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(79,70,229,.4) 0%,transparent 70%);}
+  .why-stat{margin-bottom:36px;position:relative;z-index:1;}
+  .why-stat-num{font-family:var(--fd);font-size:52px;font-weight:900;letter-spacing:-.04em;color:white;line-height:1;}
+  .why-stat-num span{color:var(--accent);}
+  .why-stat-label{font-size:14px;color:rgba(255,255,255,.6);margin-top:6px;font-weight:500;}
+
+  /* APPROACH */
+  .approach-bg{background:var(--surf-alt);}
+  .approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:64px;}
+  .approach-step{background:var(--surf);border:1px solid var(--border);border-radius:24px;padding:36px 32px;position:relative;overflow:hidden;transition:all .4s ease;box-shadow:var(--sh-sm);}
+  .approach-step:hover{transform:translateY(-8px);box-shadow:var(--sh-lg);border-color:var(--border-h);}
+  .step-num{font-family:var(--fd);font-size:48px;font-weight:900;color:var(--accent-l);letter-spacing:-.04em;line-height:1;margin-bottom:16px;}
+  .step-title{font-family:var(--fd);font-size:15px;font-weight:800;color:var(--text);margin-bottom:12px;letter-spacing:-.02em;}
+  .step-desc{font-size:14px;color:var(--muted);line-height:1.6;font-weight:500;}
+
+  /* AUDIT CTA */
+  .audit-section{background:linear-gradient(135deg,var(--accent) 0%,#3730a3 100%);color:white;border-radius:40px;margin:0 48px 0;padding:90px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:80px;position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(79,70,229,.25);}
+  .audit-section::before{content:'';position:absolute;right:-150px;top:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.15) 0%,transparent 60%);}
+  .audit-title{font-family:var(--fd);font-size:clamp(36px,4vw,56px);font-weight:900;letter-spacing:-.04em;line-height:1.05;color:white;}
+  .audit-title .thin{font-weight:300;font-style:italic;opacity:.8;}
+  .audit-sub{font-size:18px;color:rgba(255,255,255,.8);margin-top:20px;line-height:1.6;font-weight:500;}
+  .audit-perks{display:flex;flex-direction:column;gap:12px;margin-top:32px;}
+  .audit-perk{display:flex;align-items:center;gap:12px;font-size:15px;color:rgba(255,255,255,.9);font-weight:500;}
+  .audit-perk::before{content:'✓';width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;flex-shrink:0;}
+  .audit-form{min-width:380px;position:relative;z-index:1;}
+  .audit-form-inner{display:flex;gap:0;background:white;border-radius:100px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.1);}
+  .audit-input{flex:1;background:transparent;border:none;outline:none;padding:16px 24px;font-size:15px;color:var(--text);font-family:var(--fb);font-weight:500;}
+  .audit-input::placeholder{color:var(--muted);}
+  .audit-btn{background:var(--text);color:white;padding:16px 32px;border-radius:100px;font-size:13px;font-weight:800;border:none;cursor:pointer;letter-spacing:.04em;text-transform:uppercase;transition:all .3s;white-space:nowrap;}
+  .audit-btn:hover{background:var(--accent);transform:scale(1.02);}
+
+  /* ABOUT */
+  .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+  .about-img-wrap{position:relative;}
+  .about-img-card{background:var(--surf);border:1px solid var(--border);border-radius:32px;padding:48px;box-shadow:var(--sh-lg);text-align:center;}
+  .about-avatar{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#ec4899);margin:0 auto 24px;display:flex;align-items:center;justify-content:center;font-size:56px;}
+  .about-img-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;}
+  .about-img-stat{background:var(--surf-alt);border-radius:16px;padding:20px;text-align:center;}
+  .about-img-stat-num{font-family:var(--fd);font-size:28px;font-weight:900;color:var(--accent);letter-spacing:-.03em;}
+  .about-img-stat-label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;}
+  .about-content .section-tag{margin-bottom:20px;}
+  .about-text{font-size:17px;line-height:1.8;color:var(--muted);font-weight:400;margin-top:24px;}
+  .about-brands{margin-top:40px;}
+  .about-brands-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+  .brands-wrap{display:flex;flex-wrap:wrap;gap:10px;}
+  .brand-pill{background:var(--surf);border:1px solid var(--border);border-radius:100px;padding:8px 18px;font-size:13px;font-weight:600;color:var(--text);transition:all .3s;}
+  .brand-pill:hover{background:var(--accent-l);border-color:var(--border-h);color:var(--accent);}
+
+  /* FINAL CTA */
+  .final-cta{text-align:center;padding:120px 48px;}
+  .final-cta h2{font-family:var(--fd);font-size:clamp(44px,5vw,72px);font-weight:900;letter-spacing:-.04em;line-height:1.05;color:var(--text);}
+  .final-cta p{font-size:19px;color:var(--muted);margin-top:24px;line-height:1.7;font-weight:400;max-width:600px;margin-left:auto;margin-right:auto;}
+  .final-cta-btns{display:flex;gap:20px;justify-content:center;margin-top:48px;flex-wrap:wrap;}
+  .btn-dark{background:var(--text);color:white;padding:18px 44px;border-radius:100px;font-weight:700;font-size:14px;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;transition:all .3s;box-shadow:0 20px 40px rgba(0,0,0,.12);}
+  .btn-dark:hover{transform:translateY(-3px);box-shadow:0 30px 60px rgba(0,0,0,.2);}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:80px 48px 50px;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:72px;background:var(--surf);}
+  .footer-brand p{font-size:15px;color:var(--muted);margin-top:20px;line-height:1.8;max-width:280px;font-weight:500;}
+  .footer-socials{display:flex;gap:12px;margin-top:28px;}
+  .footer-social{width:42px;height:42px;border-radius:12px;background:var(--surf-alt);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:15px;color:var(--text);transition:all .3s;}
+  .footer-social:hover{background:var(--accent);color:white;border-color:var(--accent);transform:translateY(-3px);}
+  .footer-col-title{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:20px;font-family:var(--fd);}
+  .footer-links{list-style:none;display:flex;flex-direction:column;gap:14px;}
+  .footer-links a{font-size:15px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .3s;}
+  .footer-links a:hover{color:var(--accent);}
+  .footer-bottom{border-top:1px solid var(--border);padding:28px 48px;display:flex;justify-content:space-between;align-items:center;background:var(--surf);}
+  .footer-bottom p,.footer-bottom a{font-size:13px;color:var(--muted);font-weight:500;text-decoration:none;}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.25,.8,.25,1),transform .8s cubic-bezier(.25,.8,.25,1);}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  .rd1{transition-delay:.1s;} .rd2{transition-delay:.2s;} .rd3{transition-delay:.3s;}
+
+  ::-webkit-scrollbar{width:8px;}
+  ::-webkit-scrollbar-track{background:var(--bg);}
+  ::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px;}
+
+  @media(max-width:1024px){
+    .approach-grid{grid-template-columns:repeat(2,1fr);}
+    .case-grid{grid-template-columns:1fr;}
+    .services-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .why-visual{display:none;}
+    .about-inner{grid-template-columns:1fr;}
+    .about-img-wrap{display:none;}
+    .audit-section{grid-template-columns:1fr;gap:40px;}
+    .audit-form{min-width:unset;}
+  }
+  @media(max-width:768px){
+    nav{padding:18px 24px;}
+    .nav-links{display:none;}
+    .hero{grid-template-columns:1fr;padding:120px 24px 60px;}
+    .hero-visual{display:none;}
+    section{padding:80px 24px;}
+    .approach-grid{grid-template-columns:1fr;}
+    .audit-section{margin:0 20px;padding:48px 32px;border-radius:24px;}
+    .audit-form-inner{flex-direction:column;border-radius:20px;gap:10px;padding:12px;}
+    .audit-input{border-radius:12px;}
+    .audit-btn{width:100%;border-radius:12px;}
+    footer{grid-template-columns:1fr;padding:60px 24px 40px;gap:40px;}
+    .footer-bottom{padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
+    .final-cta{padding:80px 24px;}
+  }
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"><div class="cursor-ring"></div><div class="cursor-dot"></div></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">4<span>XG</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#case-studies">Case Studies</a>
+    <a href="#about">About</a>
+    <a href="#audit" class="nav-cta">Free Growth Audit</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span></span> Available for New Engagements</div>
+    <h1 class="hero-title">
+      I Scale<br/>
+      Revenue,<br/>
+      <span class="ac">Not Just Ads.</span>
+    </h1>
+    <p class="hero-sub">Growth & Performance Marketer helping SaaS, D2C & B2B brands build predictable, scalable acquisition engines across global markets.</p>
+    <div class="hero-proof">
+      <div class="proof-item"><strong>$10M+</strong> Annual Ad Spend</div>
+      <div class="proof-dot"></div>
+      <div class="proof-item"><strong>10+</strong> High-Growth Brands</div>
+      <div class="proof-dot"></div>
+      <div class="proof-item"><strong>10X</strong> Growth Delivered</div>
+    </div>
+    <div class="hero-actions">
+      <a href="#audit" class="btn-primary">Get Free Growth Audit</a>
+      <a href="#case-studies" class="btn-ghost">View Case Studies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card main-card">
+      <div class="floating-badge">Live Results</div>
+      <div class="card-label">Revenue Growth Delivered</div>
+      <div class="card-big-num">10<small>×</small></div>
+      <div class="card-desc">Multiple clients scaled to 10X growth through structured acquisition systems.</div>
+      <div style="display:flex;align-items:flex-end;gap:8px;margin-top:28px;height:64px;">
+        <div style="flex:1;background:var(--accent-l);border-radius:6px;height:30%;"></div>
+        <div style="flex:1;background:rgba(79,70,229,.3);border-radius:6px;height:50%;"></div>
+        <div style="flex:1;background:rgba(79,70,229,.5);border-radius:6px;height:65%;"></div>
+        <div style="flex:1;background:rgba(79,70,229,.7);border-radius:6px;height:80%;"></div>
+        <div style="flex:1;background:var(--accent);border-radius:6px;height:100%;box-shadow:0 0 20px rgba(79,70,229,.3);"></div>
+      </div>
+    </div>
+    <div class="mini-cards">
+      <div class="mini-card"><div class="mini-card-icon">🎯</div><div class="mini-card-val">$10<span>M+</span></div><div class="mini-card-label">Ad Spend Managed</div></div>
+      <div class="mini-card"><div class="mini-card-icon">🚀</div><div class="mini-card-val">10<span>+</span></div><div class="mini-card-label">Brands Scaled</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE — Brand Logos -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item"><div class="marquee-dot"></div>Livspace</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Rentomojo</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Pocket FM</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Interview Kickstart</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Emeritus</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Property Share</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Techinium</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Happy Jobs</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Launch & Lift</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Livspace</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Rentomojo</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Pocket FM</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Interview Kickstart</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Emeritus</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Property Share</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Techinium</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Happy Jobs</div>
+    <div class="marquee-item"><div class="marquee-dot"></div>Launch & Lift</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-tag">What I Do</div>
+      <h2 class="section-title">End-to-End Growth &<br/><span class="dim">Performance Marketing</span></h2>
+    </div>
+    <a href="#audit" class="btn-primary" style="box-shadow:none;">Start Growing</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <div class="service-icon">🚀</div>
+      <div class="service-name">Performance Marketing at Scale</div>
+      <div class="service-desc">Built and managed high-performance ad accounts with multi-million dollar budgets delivering measurable ROAS.</div>
+      <div class="service-tags"><span class="service-tag">Google Ads</span><span class="service-tag">Meta Ads</span><span class="service-tag">LinkedIn Ads</span><span class="service-tag">YouTube</span></div>
+    </div>
+    <div class="service-card reveal rd1">
+      <div class="service-num">02</div>
+      <div class="service-icon">📈</div>
+      <div class="service-name">Funnel & Conversion Optimization</div>
+      <div class="service-desc">Turning paid traffic into predictable revenue through systematic CRO, A/B testing frameworks, and landing page optimization.</div>
+      <div class="service-tags"><span class="service-tag">CRO</span><span class="service-tag">A/B Testing</span><span class="service-tag">Landing Pages</span></div>
+    </div>
+    <div class="service-card reveal rd2">
+      <div class="service-num">03</div>
+      <div class="service-icon">🌍</div>
+      <div class="service-name">Global Growth (US & Europe Focus)</div>
+      <div class="service-desc">GTM strategy for international markets with audience targeting, positioning, and full funnel localization.</div>
+      <div class="service-tags"><span class="service-tag">GTM Strategy</span><span class="service-tag">US Markets</span><span class="service-tag">EU Markets</span></div>
+    </div>
+    <div class="service-card reveal rd3">
+      <div class="service-num">04</div>
+      <div class="service-icon">⚙️</div>
+      <div class="service-name">Analytics & Growth Systems</div>
+      <div class="service-desc">No guesswork—only measurable growth. Data-driven reporting, attribution setup, and full-funnel performance analysis.</div>
+      <div class="service-tags"><span class="service-tag">Attribution</span><span class="service-tag">Analytics</span><span class="service-tag">Data-Driven</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="section-tag">Case Studies</div>
+  <h2 class="section-title">Results That <span class="dim">Speak for Themselves</span></h2>
+  <div class="case-grid">
+    <div class="case-card reveal">
+      <div class="case-tag">SaaS / D2C</div>
+      <div class="case-title">Scaling to 10X Revenue Growth</div>
+      <div class="case-problem">Growth plateau with inefficient ad spend and no structured acquisition strategy.</div>
+      <div class="case-results">
+        <div class="case-result-item">10X revenue growth achieved</div>
+        <div class="case-result-item">CAC reduced significantly</div>
+        <div class="case-result-item">Scalable acquisition engine built</div>
+      </div>
+    </div>
+    <div class="case-card reveal rd1">
+      <div class="case-tag">Performance</div>
+      <div class="case-title">$10M+ Ad Spend Optimization</div>
+      <div class="case-problem">High spend but poor efficiency — money burning with no structured optimization loops.</div>
+      <div class="case-results">
+        <div class="case-result-item">$10M+ budgets managed efficiently</div>
+        <div class="case-result-item">ROAS improved significantly</div>
+        <div class="case-result-item">Wasted spend eliminated</div>
+      </div>
+    </div>
+    <div class="case-card reveal rd2">
+      <div class="case-tag">B2B / SaaS</div>
+      <div class="case-title">B2B SaaS Lead Generation</div>
+      <div class="case-problem">Low-quality leads and inconsistent pipeline from LinkedIn and Google campaigns.</div>
+      <div class="case-results">
+        <div class="case-result-item">Lead quality improved dramatically</div>
+        <div class="case-result-item">CPL reduced</div>
+        <div class="case-result-item">Predictable pipeline built</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WORK WITH ME -->
+<section style="background:var(--surf-alt);">
+  <div class="section-tag">Why Work With Me</div>
+  <h2 class="section-title">Not Just a Marketer —<br/><span class="dim">A Growth Partner</span></h2>
+  <div class="why-grid">
+    <div class="why-list">
+      <div class="why-item reveal">
+        <div class="why-icon">🏆</div>
+        <div>
+          <div class="why-item-title">Proven Track Record Across Industries</div>
+          <div class="why-item-desc">Deep experience across SaaS, D2C, and B2B—industries that demand very different growth motions.</div>
+        </div>
+      </div>
+      <div class="why-item reveal rd1">
+        <div class="why-icon">📊</div>
+        <div>
+          <div class="why-item-title">0 → Series C Experience</div>
+          <div class="why-item-desc">Worked across every startup stage—from early traction to scaling past Series B & C funding rounds.</div>
+        </div>
+      </div>
+      <div class="why-item reveal rd2">
+        <div class="why-icon">💡</div>
+        <div>
+          <div class="why-item-title">Business Outcomes, Not Vanity Metrics</div>
+          <div class="why-item-desc">Every decision is tied to revenue, CAC, and ROAS. Not impressions, not engagement—actual business impact.</div>
+        </div>
+      </div>
+      <div class="why-item reveal rd3">
+        <div class="why-icon">🌐</div>
+        <div>
+          <div class="why-item-title">Deep Paid + Funnel + Analytics Expertise</div>
+          <div class="why-item-desc">Full-stack growth competency—from top-of-funnel acquisition to conversion optimization and attribution.</div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual reveal rd1">
+      <div class="why-stat">
+        <div class="why-stat-num">$10<span>M+</span></div>
+        <div class="why-stat-label">Annual Ad Spend Managed</div>
+      </div>
+      <div class="why-stat">
+        <div class="why-stat-num">10<span>+</span></div>
+        <div class="why-stat-label">High-Growth Brands Worked With</div>
+      </div>
+      <div class="why-stat" style="margin-bottom:0;">
+        <div class="why-stat-num">10<span>×</span></div>
+        <div class="why-stat-label">Growth Delivered for Multiple Clients</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MY APPROACH -->
+<section class="approach-bg">
+  <div style="text-align:center;margin-bottom:0;">
+    <div class="section-tag" style="margin:0 auto 20px;">My Approach</div>
+    <h2 class="section-title">How I Build<br/><span class="dim">Scalable Growth Systems</span></h2>
+  </div>
+  <div class="approach-grid">
+    <div class="approach-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Diagnose</div>
+      <div class="step-desc">Identify bottlenecks in your ads, funnel, and targeting. No assumptions—data-led from day one.</div>
+    </div>
+    <div class="approach-step reveal rd1">
+      <div class="step-num">02</div>
+      <div class="step-title">Strategize</div>
+      <div class="step-desc">Build a full-funnel growth roadmap tailored to your market stage and revenue goals.</div>
+    </div>
+    <div class="approach-step reveal rd2">
+      <div class="step-num">03</div>
+      <div class="step-title">Execute</div>
+      <div class="step-desc">Launch, test, and iterate fast. Creative testing, campaign architecture, and conversion loops—all at once.</div>
+    </div>
+    <div class="approach-step reveal rd3">
+      <div class="step-num">04</div>
+      <div class="step-title">Scale</div>
+      <div class="step-desc">Double down on profitable channels. Remove waste. Build the engine that scales without breaking.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE AUDIT CTA -->
+<div class="audit-section" id="audit">
+  <div>
+    <h2 class="audit-title">Get a <span class="thin">Free</span><br/>Growth Audit</h2>
+    <p class="audit-sub">A no-obligation deep-dive into your acquisition engine. You'll walk away with clarity.</p>
+    <div class="audit-perks">
+      <div class="audit-perk">Ad account audit (Google / Meta / LinkedIn)</div>
+      <div class="audit-perk">Funnel & landing page analysis</div>
+      <div class="audit-perk">3–5 actionable growth opportunities</div>
+    </div>
+  </div>
+  <div class="audit-form">
+    <div class="audit-form-inner">
+      <input class="audit-input" type="email" placeholder="Your work email" id="audit-email"/>
+      <button class="audit-btn" onclick="handleAudit()">Get My Free Audit</button>
+    </div>
+    <p style="font-size:13px;color:rgba(255,255,255,.6);margin-top:14px;text-align:center;">No spam. Just actionable insights.</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" style="padding-top:120px;">
+  <div class="about-inner">
+    <div class="about-img-wrap reveal">
+      <div class="about-img-card">
+        <div class="about-avatar">👤</div>
+        <div style="font-family:var(--fd);font-size:18px;font-weight:900;letter-spacing:-.03em;color:var(--text);">Growth Marketer</div>
+        <div style="font-size:14px;color:var(--muted);margin-top:6px;font-weight:500;">SaaS · D2C · B2B · Global</div>
+        <div class="about-img-stats">
+          <div class="about-img-stat"><div class="about-img-stat-num">$10M+</div><div class="about-img-stat-label">Ad Spend</div></div>
+          <div class="about-img-stat"><div class="about-img-stat-num">10+</div><div class="about-img-stat-label">Brands</div></div>
+          <div class="about-img-stat"><div class="about-img-stat-num">10×</div><div class="about-img-stat-label">Growth</div></div>
+          <div class="about-img-stat"><div class="about-img-stat-num">0→C</div><div class="about-img-stat-label">Stage Exp.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-content reveal rd1">
+      <div class="section-tag">About</div>
+      <h2 class="section-title">Growth Marketer Focused on<br/><span class="dim">Real Business Impact</span></h2>
+      <p class="about-text">I'm a growth and performance marketer with experience managing over <strong>$10M in annual ad spend</strong> and scaling businesses across SaaS, D2C, and B2B industries.</p>
+      <p class="about-text">I've worked with companies ranging from early-stage startups to Series B & C organizations—helping them unlock growth through data-driven marketing, strong fundamentals, and scalable systems.</p>
+      <p class="about-text">My focus is simple: build predictable, efficient, and high-impact growth engines.</p>
+      <div class="about-brands">
+        <div class="about-brands-label">Brands I've Worked With</div>
+        <div class="brands-wrap">
+          <span class="brand-pill">Livspace</span>
+          <span class="brand-pill">Rentomojo</span>
+          <span class="brand-pill">Pocket FM</span>
+          <span class="brand-pill">Interview Kickstart</span>
+          <span class="brand-pill">Emeritus</span>
+          <span class="brand-pill">Property Share</span>
+          <span class="brand-pill">Techinium</span>
+          <span class="brand-pill">Happy Jobs</span>
+          <span class="brand-pill">Launch & Lift</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final-cta" id="contact">
+  <div class="section-tag" style="margin:0 auto 24px;">Ready to Scale?</div>
+  <h2>Scale Profitably.<br/><span style="color:var(--muted);font-style:italic;font-weight:300;">Not Blindly.</span></h2>
+  <p>If you're serious about scaling revenue, reducing CAC, and building a predictable growth engine—let's talk. No fluff, no vanity metrics.</p>
+  <div class="final-cta-btns">
+    <a href="https://calendly.com" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
+    <a href="#audit" class="btn-dark">Get Free Audit</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="nav-logo">4<span>XG</span></a>
+    <p>Growth & Performance Marketing for brands serious about building scalable acquisition engines.</p>
+    <div class="footer-socials">
+      <a href="#" class="footer-social">𝕏</a>
+      <a href="#" class="footer-social">in</a>
+    </div>
+  </div>
+  <div>
+    <div class="footer-col-title">Services</div>
+    <ul class="footer-links">
+      <li><a href="#services">Performance Marketing</a></li>
+      <li><a href="#services">Funnel Optimization</a></li>
+      <li><a href="#services">Global Growth</a></li>
+      <li><a href="#services">Analytics Systems</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Quick Links</div>
+    <ul class="footer-links">
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#audit">Free Audit</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Get in Touch</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;font-weight:500;line-height:1.6;">Ready to scale? Let's build your growth engine together.</p>
+    <a href="#audit" class="btn-primary" style="font-size:13px;padding:14px 28px;box-shadow:none;display:inline-flex;">Get Free Audit →</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 4XG Growth. All rights reserved.</p>
+  <p><a href="#" style="margin-right:20px;">Privacy</a><a href="#">Terms</a></p>
+</div>
+
+<script>
+  // Cursor
+  const cur = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => { cur.style.left = e.clientX+'px'; cur.style.top = e.clientY+'px'; });
+
+  // Scroll Reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Audit form
+  function handleAudit() {
+    const email = document.getElementById('audit-email').value;
+    if(!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+    alert('Thanks! I\'ll reach out within 24 hours with your growth audit.');
+  }
+
+  // Nav scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if(window.scrollY > 50) nav.style.boxShadow = '0 4px 24px rgba(0,0,0,0.06)';
+    else nav.style.boxShadow = 'none';
+  });
+</script>
+</body>
+</html>
