@@ -1,7 +1,0 @@
-# Netlify configuration file
-[build]
-  # No build command needed for a pure static site
-  publish = "./"
-  # If you later add a build step, specify it here, e.g. "npm run build"
-
-# Optional redirect rules can be added under [[redirects]]

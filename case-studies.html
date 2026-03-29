@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Case Studies | 4XG — Real Growth for Real Companies</title>
+  <meta name="description" content="7 data-driven case studies: SaaS CAC ↓ 38%, D2C ROAS 5.8×, B2B leads ↑ 400%, EdTech CPA ↓ 30%, Mobility installs ↑ 250%, PropTech deals ↑ 4×, FinTech sign-ups ↑ 3.5×."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link crossorigin="" rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary-container": "#efe0ff",
+            "outline": "#958da1",
+            "tertiary": "#00dbe9",
+            "background": "#131316",
+            "on-background": "#e4e1e6",
+            "outline-variant": "#4a4455",
+            "primary-fixed-dim": "#d6baff",
+            "surface-variant": "#353438",
+            "primary-container": "#813de2",
+            "inverse-surface": "#e4e1e6",
+            "on-primary": "#420089",
+            "surface-container-high": "#2a2a2d",
+            "inverse-primary": "#7832d9",
+            "on-surface-variant": "#ccc3d8",
+            "surface-container-lowest": "#0e0e11",
+            "surface": "#131316",
+            "on-surface": "#e4e1e6",
+            "surface-container": "#1f1f22",
+            "primary": "#d6baff",
+            "secondary-container": "#4a4455",
+            "surface-bright": "#39393c",
+            "surface-container-highest": "#353438",
+            "surface-container-low": "#1b1b1e"
+          },
+          fontFamily: { "headline": ["Manrope"], "body": ["Inter"], "label": ["Inter"] },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-nav { background: rgba(19,19,22,0.75); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+    .kinetic-gradient { background: linear-gradient(135deg, #d6baff 0%, #813de2 100%); }
+    .ghost-border { border: 1px solid rgba(74,68,85,0.2); }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.32s; }
+    .noise-overlay {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glass-card { background: rgba(42,42,45,0.6); backdrop-filter: blur(20px); }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 overflow-x-hidden">
+
+<div class="fixed inset-0 z-0 noise-overlay pointer-events-none opacity-60"></div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/5">
+  <div class="flex justify-between items-center px-6 md:px-10 py-5 max-w-[1440px] mx-auto">
+    <a href="index.html" class="text-2xl font-black tracking-tighter text-white uppercase font-headline">4XG</a>
+    <div class="hidden md:flex gap-10 font-headline font-bold tracking-tight text-sm items-center">
+      <a class="text-[#94a3b8] hover:text-white transition-colors" href="services.html">Services</a>
+      <a class="text-white border-b-2 border-[#7C3AED] pb-1" href="case-studies.html">Case Studies</a>
+      <a class="text-[#94a3b8] hover:text-white transition-colors" href="index.html#about">About</a>
+    </div>
+    <button id="nav-toggle" class="md:hidden text-white p-1"><span class="material-symbols-outlined text-3xl">menu</span></button>
+    <a href="index.html#cta" class="hidden md:inline-flex kinetic-gradient text-white px-6 py-3 rounded-full font-headline font-bold text-sm scale-95 hover:scale-100 active:scale-90 transition-transform shadow-[0_0_20px_rgba(124,58,237,0.2)]">
+      Get a Free Audit
+    </a>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 flex flex-col gap-4">
+    <a class="text-white font-headline font-bold text-base py-2 border-b border-outline-variant/20" href="services.html">Services</a>
+    <a class="text-white font-headline font-bold text-base py-2 border-b border-outline-variant/20" href="case-studies.html">Case Studies</a>
+    <a class="text-white font-headline font-bold text-base py-2 border-b border-outline-variant/20" href="index.html#about">About</a>
+    <a href="index.html#cta" class="kinetic-gradient text-white text-center px-6 py-3 rounded-full font-headline font-bold text-sm mt-2">Get a Free Audit</a>
+  </div>
+</nav>
+
+<main class="pt-32">
+
+  <!-- ====== HERO ====== -->
+  <section class="max-w-[1440px] mx-auto px-6 md:px-10 mb-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+      <div class="lg:col-span-8">
+        <span class="text-tertiary font-label text-xs uppercase tracking-[0.22em] font-bold mb-4 block opacity-0" style="animation: fadeUp 0.7s ease forwards">Proven Performance</span>
+        <h1 class="font-headline font-extrabold text-5xl md:text-7xl xl:text-[88px] tracking-tighter text-white leading-[1.02] opacity-0" style="animation: fadeUp 0.7s 0.1s ease forwards">
+          Real Growth for<br/>Real Companies
+        </h1>
+      </div>
+      <div class="lg:col-span-4 pb-4">
+        <p class="text-on-surface-variant text-lg leading-relaxed max-w-sm opacity-0" style="animation: fadeUp 0.7s 0.22s ease forwards">
+          Data isn't static. We treat performance as a living engine, optimizing every touchpoint to drive hyper-efficient scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CASE STUDY 1: E-COMMERCE SCALE (Bento) ====== -->
+  <section class="max-w-[1440px] mx-auto px-6 md:px-10 mb-32">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <!-- Main visual card -->
+      <div class="reveal lg:col-span-2 bg-surface-container-low rounded-2xl overflow-hidden relative group ghost-border min-h-[400px]">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent opacity-80 z-10"></div>
+        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 absolute inset-0"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0o8ZMcrSsR5rxodDI_VF8R2DtKksvWFyUjWORZlirOnXdaLARGmznDvkADLvEO4EMwbToxOYSjvoCAuoJmqThrPvMBayFElA1-eyyx-u9T-PMjHs7MJ_aL0CI3n9-vUEpYkp2mAp7BuCosd4YPlSR4UCx_0TjbOHW0DRKEuaSmmONw83XbTBXqnXxd95LtyF_2Ke7l-8-NHHcstwNF5z0Zzh8yrZRRUiOwHrTk2eVrIPUtMjAQ2jxl6Rpcyc5Ye2AUgiwFu-W0WhG"
+          alt="Abstract financial data visualization with glowing violet lines"/>
+        <div class="absolute bottom-8 left-8 z-20">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-primary/20 text-primary px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest">D2C E-Commerce</span>
+            <span class="text-tertiary font-label text-xs font-bold uppercase tracking-widest">4-Month Sprint</span>
+          </div>
+          <h2 class="font-headline text-3xl md:text-4xl font-extrabold text-white mb-2">Scaling to 10X Growth</h2>
+          <p class="text-on-surface-variant max-w-lg text-sm">Transforming inefficient digital spend into a high-velocity revenue engine through full-funnel attribution and creative testing at scale.</p>
+        </div>
+      </div>
+      <!-- Stats sidebar -->
+      <div class="reveal reveal-delay-1 flex flex-col gap-5">
+        <div class="bg-surface-container-high p-8 rounded-2xl ghost-border flex-1 flex flex-col justify-center">
+          <span class="text-tertiary font-label text-[10px] font-black uppercase tracking-widest mb-3 block">Primary Outcome</span>
+          <div class="font-headline text-6xl md:text-7xl font-black text-white tracking-tighter mb-1">10X</div>
+          <div class="text-on-surface-variant font-medium">Revenue Growth YoY</div>
+          <div class="mt-4 flex gap-6 text-sm">
+            <div>
+              <span class="text-tertiary font-bold">ROAS 5.8×</span>
+              <div class="text-on-surface-variant text-xs">up from 2.0×</div>
+            </div>
+            <div>
+              <span class="text-primary font-bold">AOV +20%</span>
+              <div class="text-on-surface-variant text-xs">average order value</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest p-8 rounded-2xl ghost-border flex-1">
+          <span class="text-primary font-label text-[10px] font-black uppercase tracking-widest mb-4 block">The Problem</span>
+          <p class="text-on-surface leading-relaxed italic text-sm">"Our ad spend was increasing, but our customer acquisition costs were spiraling out of control. We were burning cash to stay flat."</p>
+        </div>
+      </div>
+      <!-- Details row -->
+      <div class="reveal reveal-delay-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-surface-container-low p-8 rounded-2xl ghost-border">
+          <div class="material-symbols-outlined text-primary mb-4 text-3xl">psychology</div>
+          <h3 class="font-headline font-bold text-white mb-2">What I Did</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Deployed a full-funnel attribution model, restructured creative testing cycles (20+ variants per sprint), and synchronized email automation with top-of-funnel acquisition cadences.</p>
+        </div>
+        <div class="bg-surface-container-low p-8 rounded-2xl ghost-border">
+          <div class="material-symbols-outlined text-tertiary mb-4 text-3xl">trending_down</div>
+          <h3 class="font-headline font-bold text-white mb-2">Efficiency Gain</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Reduced CAC by 42% while simultaneously increasing the daily budget ceiling. Meta Ads ROAS moved from 2× to 5.8× in four months through systematic creative optimization.</p>
+        </div>
+        <div class="bg-surface-container-low p-8 rounded-2xl ghost-border">
+          <div class="material-symbols-outlined text-primary mb-4 text-3xl">rocket_launch</div>
+          <h3 class="font-headline font-bold text-white mb-2">Final Result</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">10× revenue growth year-over-year. The brand expanded into three new international markets within 8 months, fueled by a scalable, profitable paid media engine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CASE STUDY 2: MULTI-MILLION AD SPEND ====== -->
+  <section class="bg-surface-container-low py-32 mb-32 border-y border-outline-variant/10">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+        <div class="max-w-2xl">
+          <span class="reveal text-primary font-label text-xs uppercase tracking-[0.2em] font-bold mb-4 block">Institutional Management</span>
+          <h2 class="reveal reveal-delay-1 font-headline font-extrabold text-4xl md:text-5xl text-white tracking-tighter leading-tight">Multi-Million Ad Spend<br/>Optimization</h2>
+        </div>
+        <div class="reveal reveal-delay-2 flex gap-4">
+          <div class="bg-surface-container-highest px-6 py-4 rounded-2xl ghost-border">
+            <div class="text-tertiary font-headline font-black text-3xl">$10M+</div>
+            <div class="text-on-surface-variant text-[10px] font-bold uppercase tracking-wider mt-1">Managed Spend</div>
+          </div>
+          <div class="bg-surface-container-highest px-6 py-4 rounded-2xl ghost-border">
+            <div class="text-primary font-headline font-black text-3xl">4.2x</div>
+            <div class="text-on-surface-variant text-[10px] font-bold uppercase tracking-wider mt-1">ROAS Average</div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Problem / Solution -->
+        <div class="space-y-10">
+          <div class="reveal">
+            <div class="flex items-center gap-4 mb-5">
+              <span class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary material-symbols-outlined">warning</span>
+              <h4 class="font-headline font-bold text-xl text-white">The Problem</h4>
+            </div>
+            <p class="text-on-surface-variant text-lg leading-relaxed">The client was operating at massive scale with diminishing returns. Google and Meta campaigns were cannibalizing each other, leading to high wasted spend and inaccurate reporting on true incremental growth.</p>
+          </div>
+          <div class="reveal">
+            <div class="flex items-center gap-4 mb-5">
+              <span class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-tertiary material-symbols-outlined">construction</span>
+              <h4 class="font-headline font-bold text-xl text-white">What I Did</h4>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex gap-4 text-on-surface">
+                <span class="text-tertiary material-symbols-outlined mt-0.5 shrink-0">check_circle</span>
+                <span>Consolidated multi-account structures to leverage algorithmic learning across consolidate campaigns.</span>
+              </li>
+              <li class="flex gap-4 text-on-surface">
+                <span class="text-tertiary material-symbols-outlined mt-0.5 shrink-0">check_circle</span>
+                <span>Implemented offline conversion tracking for 100% data accuracy—connecting CRM data to ad platforms.</span>
+              </li>
+              <li class="flex gap-4 text-on-surface">
+                <span class="text-tertiary material-symbols-outlined mt-0.5 shrink-0">check_circle</span>
+                <span>Developed a custom Looker Studio dashboard to monitor cross-channel cannibalization in real-time.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Chart visual -->
+        <div class="reveal relative bg-surface rounded-2xl p-8 overflow-hidden ghost-border">
+          <div class="absolute top-0 right-0 p-4">
+            <span class="text-[10px] font-bold text-outline uppercase tracking-widest">Efficiency Matrix v4.0</span>
+          </div>
+          <img class="w-full rounded-xl mb-6 shadow-2xl"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKbVlmgfmWOJ6bfMw7PzCRJ-kwSjvubkrkSp9ZJuIcc7zdi9bMVSV08SHaF0jEJ-A-2F82jTRqpXSarWyDoPJBqXONxSh13Ytk2K_4BorMPypVEBYBvbWC1iVlWuJhIhsLDMXsMSveogSckDHjFoaMu6Wr4zPuouZRpcFTdxMs_chN3XEcPL2goh9D_VrjSb7odv5OtCAHY7vzhZ_imn6vcfesVwzjYaIroUGOvzPQqlrS6XWoopO7ja-vBwo0kfxtL4EZbi8I8B4N"
+            alt="Performance growth chart with neon purple and cyan trajectory lines"/>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-5 bg-surface-container-low rounded-xl">
+              <span class="text-on-surface-variant text-xs mb-2 block">Waste Reduction</span>
+              <span class="text-white font-headline font-bold text-2xl">28%</span>
+            </div>
+            <div class="p-5 bg-surface-container-low rounded-xl">
+              <span class="text-on-surface-variant text-xs mb-2 block">Lead Velocity</span>
+              <span class="text-white font-headline font-bold text-2xl">+145%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CASE STUDY 3: B2B LEAD GEN ====== -->
+  <section class="max-w-[1440px] mx-auto px-6 md:px-10 mb-32">
+    <div class="reveal bg-surface-container-highest rounded-3xl p-8 md:p-12 relative overflow-hidden ghost-border">
+      <div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <span class="text-tertiary font-label text-xs font-bold uppercase tracking-widest mb-4 block">B2B &amp; SaaS Mastery</span>
+          <h2 class="font-headline font-extrabold text-4xl md:text-5xl text-white tracking-tighter mb-6 leading-tight">High-Intent Lead<br/>Generation</h2>
+          <div class="space-y-6 mb-8">
+            <div>
+              <h4 class="text-primary font-bold text-xs uppercase tracking-wider mb-2">The Bottleneck</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Volume was high, but lead quality was abysmal. Sales teams were wasting 70% of their time on unqualified prospects from broad social ads. CAC was ballooning.</p>
+            </div>
+            <div>
+              <h4 class="text-tertiary font-bold text-xs uppercase tracking-wider mb-2">The Solution</h4>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Engineered a multi-step LinkedIn + Google lead funnel with whitepaper gating, hyper-specific firmographic targeting (company size, tech stack, funding stage), and lead scoring to pass only SQL-ready contacts to sales.</p>
+            </div>
+          </div>
+          <div class="flex gap-8">
+            <div>
+              <div class="text-white font-headline font-black text-3xl">400%</div>
+              <div class="text-outline text-[10px] font-bold uppercase tracking-widest mt-1">MQL Quality Lift</div>
+            </div>
+            <div>
+              <div class="text-white font-headline font-black text-3xl">-35%</div>
+              <div class="text-outline text-[10px] font-bold uppercase tracking-widest mt-1">CPL Decrease</div>
+            </div>
+            <div>
+              <div class="text-white font-headline font-black text-3xl">-45%</div>
+              <div class="text-outline text-[10px] font-bold uppercase tracking-widest mt-1">CAC Reduction</div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-surface p-6 rounded-2xl ghost-border">
+              <span class="material-symbols-outlined text-primary mb-4 block" style="font-variation-settings:'FILL' 1;">hub</span>
+              <p class="text-on-surface font-medium text-sm">LinkedIn Lead Gen Forms with automated CRM sync and lead-to-account mapping.</p>
+            </div>
+            <div class="bg-surface p-6 rounded-2xl ghost-border mt-6">
+              <span class="material-symbols-outlined text-tertiary mb-4 block" style="font-variation-settings:'FILL' 1;">ads_click</span>
+              <p class="text-on-surface font-medium text-sm">High-intent Google Search keyword mining—targeting bottom-of-funnel buying signals.</p>
+            </div>
+            <div class="bg-surface p-6 rounded-2xl ghost-border">
+              <span class="material-symbols-outlined text-primary mb-4 block" style="font-variation-settings:'FILL' 1;">verified_user</span>
+              <p class="text-on-surface font-medium text-sm">Lead Scoring algorithm to route SQL-ready contacts directly to AEs, eliminating BDR waste.</p>
+            </div>
+            <div class="bg-surface p-6 rounded-2xl ghost-border mt-6">
+              <span class="material-symbols-outlined text-tertiary mb-4 block" style="font-variation-settings:'FILL' 1;">auto_graph</span>
+              <p class="text-on-surface font-medium text-sm">Closed-loop reporting connecting ad spend to closed-won revenue, tracking true deal-value ROI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CASE STUDIES GRID (4-7) ====== -->
+  <section class="max-w-[1440px] mx-auto px-6 md:px-10 mb-32">
+    <div class="reveal text-center mb-16">
+      <div class="text-primary font-label text-xs uppercase tracking-[0.2em] font-bold mb-4">More Results</div>
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold text-white tracking-tight">Across Every Vertical</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      <!-- CS 4: EdTech -->
+      <div class="reveal bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container-high transition-all duration-300 group">
+        <div class="flex items-center justify-between mb-6">
+          <span class="bg-surface-container-highest px-3 py-1 rounded-lg text-tertiary text-[10px] font-black uppercase tracking-widest">EdTech</span>
+          <span class="text-on-surface-variant text-xs">3 months · $25K spend</span>
+        </div>
+        <h3 class="font-headline font-bold text-white text-2xl mb-3">US Market Expansion<br/>& Trial Growth</h3>
+        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">A U.S. outreach campaign via YouTube and Google Ads for an education startup increased trial enrollments 2× and cut CPA by 30% in 90 days. Multi-channel tracking via GA4 and GTM was the backbone.</p>
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-outline-variant/20">
+          <div class="text-center">
+            <div class="text-tertiary font-headline font-black text-2xl">+200%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Trial Sign-ups</div>
+          </div>
+          <div class="text-center">
+            <div class="text-primary font-headline font-black text-2xl">-30%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">CPA</div>
+          </div>
+          <div class="text-center">
+            <div class="text-white font-headline font-black text-2xl">+65%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Conversion Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 5: Mobility App -->
+      <div class="reveal reveal-delay-1 bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container-high transition-all duration-300 group">
+        <div class="flex items-center justify-between mb-6">
+          <span class="bg-surface-container-highest px-3 py-1 rounded-lg text-tertiary text-[10px] font-black uppercase tracking-widest">Mobility App</span>
+          <span class="text-on-surface-variant text-xs">2 months · $20K spend</span>
+        </div>
+        <h3 class="font-headline font-bold text-white text-2xl mb-3">App Growth via Meta<br/>&amp; Apple Search Ads</h3>
+        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Leveraging Meta App Ads, Apple Search Ads, and deep-link attribution via Facebook CAPI. Installs exploded while cost per install dropped from $2.50 to $1.50—users who actually activated.</p>
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-outline-variant/20">
+          <div class="text-center">
+            <div class="text-tertiary font-headline font-black text-2xl">+250%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">App Installs</div>
+          </div>
+          <div class="text-center">
+            <div class="text-primary font-headline font-black text-2xl">-40%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Cost/Install</div>
+          </div>
+          <div class="text-center">
+            <div class="text-white font-headline font-black text-2xl">3×</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Active Users</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 6: PropTech -->
+      <div class="reveal bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container-high transition-all duration-300 group">
+        <div class="flex items-center justify-between mb-6">
+          <span class="bg-surface-container-highest px-3 py-1 rounded-lg text-tertiary text-[10px] font-black uppercase tracking-widest">PropTech</span>
+          <span class="text-on-surface-variant text-xs">3 months · $15K spend</span>
+        </div>
+        <h3 class="font-headline font-bold text-white text-2xl mb-3">High-Value Lead<br/>Quality Overhaul</h3>
+        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Local search ads and hyper-targeted Facebook Ads for a real-estate marketplace, integrated with CRM for high-value zip-code optimization. Qualified inquiries skyrocketed while cost per qualified lead halved.</p>
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-outline-variant/20">
+          <div class="text-center">
+            <div class="text-tertiary font-headline font-black text-2xl">+180%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Qualified Leads</div>
+          </div>
+          <div class="text-center">
+            <div class="text-primary font-headline font-black text-2xl">-55%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Cost/Lead</div>
+          </div>
+          <div class="text-center">
+            <div class="text-white font-headline font-black text-2xl">4×</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Sales Deals</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 7: FinTech -->
+      <div class="reveal reveal-delay-1 bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container-high transition-all duration-300 group">
+        <div class="flex items-center justify-between mb-6">
+          <span class="bg-surface-container-highest px-3 py-1 rounded-lg text-tertiary text-[10px] font-black uppercase tracking-widest">FinTech App</span>
+          <span class="text-on-surface-variant text-xs">4 months · $50K spend</span>
+        </div>
+        <h3 class="font-headline font-bold text-white text-2xl mb-3">FinTech User Growth<br/>at Efficient Scale</h3>
+        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Combined Google UAC (Universal App Campaigns) with LinkedIn nurture sequences and GTM-powered attribution. Sign-ups grew 3.5× in four months while CAC fell 35%—ROAS measured on lifetime trial-to-paid conversion rose 220%.</p>
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-outline-variant/20">
+          <div class="text-center">
+            <div class="text-tertiary font-headline font-black text-2xl">3.5×</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">Sign-up Growth</div>
+          </div>
+          <div class="text-center">
+            <div class="text-primary font-headline font-black text-2xl">-35%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">CAC</div>
+          </div>
+          <div class="text-center">
+            <div class="text-white font-headline font-black text-2xl">+220%</div>
+            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider mt-1">LTV ROAS</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== RESULTS SUMMARY STRIP ====== -->
+  <section class="bg-surface-container-low py-20 mb-32 border-y border-outline-variant/10">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+      <div class="reveal text-center mb-12">
+        <p class="text-on-surface-variant text-sm uppercase tracking-[0.2em] font-bold">Aggregate results across all engagements</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="reveal text-center">
+          <div class="text-4xl md:text-5xl font-headline font-black text-white mb-2">$10M+</div>
+          <div class="text-outline text-xs uppercase tracking-widest font-bold">Ad Spend Managed</div>
+        </div>
+        <div class="reveal reveal-delay-1 text-center">
+          <div class="text-4xl md:text-5xl font-headline font-black text-tertiary mb-2">4.8×</div>
+          <div class="text-outline text-xs uppercase tracking-widest font-bold">Average ROAS</div>
+        </div>
+        <div class="reveal reveal-delay-2 text-center">
+          <div class="text-4xl md:text-5xl font-headline font-black text-primary mb-2">-38%</div>
+          <div class="text-outline text-xs uppercase tracking-widest font-bold">Avg CAC Reduction</div>
+        </div>
+        <div class="reveal reveal-delay-3 text-center">
+          <div class="text-4xl md:text-5xl font-headline font-black text-white mb-2">10+</div>
+          <div class="text-outline text-xs uppercase tracking-widest font-bold">Brands Scaled</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FINAL CTA ====== -->
+  <section class="max-w-[1440px] mx-auto px-6 md:px-10 mb-32">
+    <div class="reveal relative bg-surface rounded-3xl py-24 px-8 text-center border border-primary/20 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-tertiary/5 pointer-events-none"></div>
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/8 rounded-full blur-[80px] pointer-events-none"></div>
+      <div class="relative z-10">
+        <div class="text-tertiary font-label text-xs uppercase tracking-[0.2em] font-bold mb-6">Your Growth Story, Next</div>
+        <h2 class="font-headline font-extrabold text-5xl md:text-7xl text-white tracking-tighter mb-8">Ready for<br/>Authority?</h2>
+        <p class="text-on-surface-variant text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+          Your growth is a math problem we've already solved. Let's apply the kinetic engine to your brand.
+        </p>
+        <a href="index.html#cta" class="inline-block kinetic-gradient text-white px-10 py-5 rounded-full font-headline font-extrabold text-lg tracking-tight hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] hover:scale-105 active:scale-95 transition-all">
+          Get Your Growth Plan
+        </a>
+        <p class="mt-8 text-xs text-on-surface-variant uppercase tracking-[0.25em]">Free 30-minute growth consultation · No commitment</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#0a0a0d] w-full py-20 px-6 md:px-10 border-t border-outline-variant/10">
+  <div class="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+    <div class="sm:col-span-2 md:col-span-1">
+      <span class="text-2xl font-black text-white mb-4 block font-headline uppercase tracking-tighter">4XG</span>
+      <p class="text-[#4a4455] font-body text-sm leading-relaxed">Elevating brands through kinetic performance marketing and authoritative data strategy.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-headline font-bold mb-5 uppercase tracking-widest text-xs">Explore</h4>
+      <ul class="space-y-3 font-body text-sm">
+        <li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="services.html">Services</a></li>
+        <li><a class="text-[#7C3AED] hover:text-[#00dbe9] transition-colors" href="case-studies.html">Case Studies</a></li>
+        <li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="index.html#about">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-headline font-bold mb-5 uppercase tracking-widest text-xs">Legal</h4>
+      <ul class="space-y-3 font-body text-sm">
+        <li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">Privacy Policy</a></li>
+        <li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-headline font-bold mb-5 uppercase tracking-widest text-xs">Newsletter</h4>
+      <div class="flex flex-col gap-3">
+        <input class="bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-sm focus:border-primary outline-none transition-all" placeholder="Email address" type="email"/>
+        <button class="bg-primary-container text-white py-3 rounded-xl font-bold text-sm tracking-tight transition-transform active:scale-95 hover:opacity-90">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-outline-variant/10 flex flex-col sm:flex-row justify-between gap-3">
+    <p class="text-[#4a4455] font-body text-sm">© 2025 4XG Kinetic Authority. All rights reserved.</p>
+    <p class="text-[#4a4455] font-body text-xs uppercase tracking-widest">Performance Engineering</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('nav-toggle')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); }});
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
