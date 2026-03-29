@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Growth & Performance Marketing | Scale Revenue, Not Just Ads</title>
-<meta name="description" content="Growth & Performance Marketer helping SaaS, D2C & B2B brands build predictable, scalable acquisition engines. $10M+ ad spend managed."/>
+<title>4XG Growth Agency – Performance Marketing & Analytics for ROI</title>
+<meta name="description" content="4XG is a growth marketing consultancy: $10M ad budgets managed, 10× client growth, CAC ↓ 40%. We use Google Ads, Meta Ads, GA4 tracking and CRO to deliver measurable results for SaaS, D2C, B2B & EdTech brands."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
@@ -103,7 +103,10 @@
   /* SERVICES */
   .services-bg{background:var(--surf-alt);}
   .services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;flex-wrap:wrap;gap:24px;}
-  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .services-grid .service-card:nth-child(4){margin-left:calc(50% + 12px);margin-right:auto;}
+  .services-grid .service-card:nth-child(4),.services-grid .service-card:nth-child(5){grid-column:auto;}
+  @media(min-width:1025px){.services-grid{grid-template-rows:auto auto;}.services-grid .service-card:nth-child(4){margin-left:0;}.last-row{display:flex;gap:24px;justify-content:center;margin-top:0;}.last-row .service-card{flex:0 0 calc(33.33% - 16px);}}
   .service-card{background:var(--surf);border:1px solid transparent;border-radius:24px;padding:44px;transition:all .4s cubic-bezier(.25,.8,.25,1);position:relative;overflow:hidden;box-shadow:var(--sh-sm);}
   .service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;}
   .service-card:hover{transform:translateY(-8px);border-color:var(--border-h);box-shadow:var(--sh-lg);}
@@ -261,31 +264,31 @@
 <section class="hero">
   <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
   <div class="hero-content">
-    <div class="hero-badge"><span></span> Available for New Engagements</div>
+    <div class="hero-badge"><span></span> Data-Driven Growth Agency</div>
     <h1 class="hero-title">
-      I Scale<br/>
-      Revenue,<br/>
-      <span class="ac">Not Just Ads.</span>
+      Scale Profitably<br/>
+      with <span class="ac">Data-Driven</span><br/>
+      <span class="it">Marketing.</span>
     </h1>
-    <p class="hero-sub">Growth & Performance Marketer helping SaaS, D2C & B2B brands build predictable, scalable acquisition engines across global markets.</p>
+    <p class="hero-sub">We help SaaS, D2C & B2B brands achieve measurable growth. Through paid media, funnel optimization and full-funnel strategy, our campaigns have tripled revenue and cut CAC in half for our clients.</p>
     <div class="hero-proof">
-      <div class="proof-item"><strong>$10M+</strong> Annual Ad Spend</div>
+      <div class="proof-item"><strong>$10M+</strong> Ad Budgets Managed</div>
       <div class="proof-dot"></div>
-      <div class="proof-item"><strong>10+</strong> High-Growth Brands</div>
+      <div class="proof-item"><strong>10×</strong> Revenue Growth Delivered</div>
       <div class="proof-dot"></div>
-      <div class="proof-item"><strong>10X</strong> Growth Delivered</div>
+      <div class="proof-item"><strong>CAC ↓40%</strong> Average Reduction</div>
     </div>
     <div class="hero-actions">
-      <a href="#audit" class="btn-primary">Get Free Growth Audit</a>
+      <a href="#audit" class="btn-primary">Get Your Free Audit</a>
       <a href="#case-studies" class="btn-ghost">View Case Studies <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
   <div class="hero-visual">
     <div class="hero-card main-card">
       <div class="floating-badge">Live Results</div>
-      <div class="card-label">Revenue Growth Delivered</div>
-      <div class="card-big-num">10<small>×</small></div>
-      <div class="card-desc">Multiple clients scaled to 10X growth through structured acquisition systems.</div>
+      <div class="card-label">Average ROAS Achieved</div>
+      <div class="card-big-num">5.8<small>×</small></div>
+      <div class="card-desc">D2C clients scaled from 2× to 5.8× ROAS with Meta Ads & Google Shopping optimization.</div>
       <div style="display:flex;align-items:flex-end;gap:8px;margin-top:28px;height:64px;">
         <div style="flex:1;background:var(--accent-l);border-radius:6px;height:30%;"></div>
         <div style="flex:1;background:rgba(79,70,229,.3);border-radius:6px;height:50%;"></div>
@@ -296,7 +299,7 @@
     </div>
     <div class="mini-cards">
       <div class="mini-card"><div class="mini-card-icon">🎯</div><div class="mini-card-val">$10<span>M+</span></div><div class="mini-card-label">Ad Spend Managed</div></div>
-      <div class="mini-card"><div class="mini-card-icon">🚀</div><div class="mini-card-val">10<span>+</span></div><div class="mini-card-label">Brands Scaled</div></div>
+      <div class="mini-card"><div class="mini-card-icon">📉</div><div class="mini-card-val">CAC<span> ↓40%</span></div><div class="mini-card-label">Avg Cost Reduction</div></div>
     </div>
   </div>
 </section>
@@ -329,7 +332,7 @@
 <section class="services-bg" id="services">
   <div class="services-header">
     <div>
-      <div class="section-tag">What I Do</div>
+      <div class="section-tag">What We Do</div>
       <h2 class="section-title">End-to-End Growth &<br/><span class="dim">Performance Marketing</span></h2>
     </div>
     <a href="#audit" class="btn-primary" style="box-shadow:none;">Start Growing</a>
@@ -338,30 +341,37 @@
     <div class="service-card reveal">
       <div class="service-num">01</div>
       <div class="service-icon">🚀</div>
-      <div class="service-name">Performance Marketing at Scale</div>
-      <div class="service-desc">Built and managed high-performance ad accounts with multi-million dollar budgets delivering measurable ROAS.</div>
-      <div class="service-tags"><span class="service-tag">Google Ads</span><span class="service-tag">Meta Ads</span><span class="service-tag">LinkedIn Ads</span><span class="service-tag">YouTube</span></div>
+      <div class="service-name">Paid Media Campaigns</div>
+      <div class="service-desc">Google Ads (Search, Display, YouTube), Meta (Facebook/Instagram/WhatsApp), LinkedIn Ads, Amazon DSP & DV360 — ROI-focused campaigns with multi-million dollar budget management.</div>
+      <div class="service-tags"><span class="service-tag">Google Ads</span><span class="service-tag">Meta Ads</span><span class="service-tag">LinkedIn Ads</span><span class="service-tag">YouTube</span><span class="service-tag">DV360</span></div>
     </div>
     <div class="service-card reveal rd1">
       <div class="service-num">02</div>
       <div class="service-icon">📈</div>
       <div class="service-name">Funnel & Conversion Optimization</div>
-      <div class="service-desc">Turning paid traffic into predictable revenue through systematic CRO, A/B testing frameworks, and landing page optimization.</div>
-      <div class="service-tags"><span class="service-tag">CRO</span><span class="service-tag">A/B Testing</span><span class="service-tag">Landing Pages</span></div>
+      <div class="service-desc">Landing page audits, A/B testing (Optimizely/VWO), and UX tweaks — turning paid traffic into predictable, scalable revenue. Average landing page CR lifted 30–50%.</div>
+      <div class="service-tags"><span class="service-tag">CRO</span><span class="service-tag">A/B Testing</span><span class="service-tag">Landing Pages</span><span class="service-tag">VWO</span></div>
     </div>
     <div class="service-card reveal rd2">
       <div class="service-num">03</div>
-      <div class="service-icon">🌍</div>
-      <div class="service-name">Global Growth (US & Europe Focus)</div>
-      <div class="service-desc">GTM strategy for international markets with audience targeting, positioning, and full funnel localization.</div>
-      <div class="service-tags"><span class="service-tag">GTM Strategy</span><span class="service-tag">US Markets</span><span class="service-tag">EU Markets</span></div>
+      <div class="service-icon">📊</div>
+      <div class="service-name">Analytics & Insights</div>
+      <div class="service-desc">GA4 setup, GTM implementation, BigQuery data warehousing, multi-touch attribution models, and unified dashboards (Looker Studio/Tableau) — no guesswork, only measurable growth.</div>
+      <div class="service-tags"><span class="service-tag">GA4</span><span class="service-tag">GTM</span><span class="service-tag">BigQuery</span><span class="service-tag">Looker Studio</span></div>
     </div>
     <div class="service-card reveal rd3">
       <div class="service-num">04</div>
-      <div class="service-icon">⚙️</div>
-      <div class="service-name">Analytics & Growth Systems</div>
-      <div class="service-desc">No guesswork—only measurable growth. Data-driven reporting, attribution setup, and full-funnel performance analysis.</div>
-      <div class="service-tags"><span class="service-tag">Attribution</span><span class="service-tag">Analytics</span><span class="service-tag">Data-Driven</span></div>
+      <div class="service-icon">🌍</div>
+      <div class="service-name">Go-To-Market Strategy</div>
+      <div class="service-desc">Audience research, messaging, and positioning for US & EU markets. Full-funnel growth roadmaps, customer personas, and marketing playbooks tailored to your market stage.</div>
+      <div class="service-tags"><span class="service-tag">GTM Strategy</span><span class="service-tag">US/EU Markets</span><span class="service-tag">Buyer Personas</span></div>
+    </div>
+    <div class="service-card reveal rd1">
+      <div class="service-num">05</div>
+      <div class="service-icon">🎨</div>
+      <div class="service-name">Creative & Content Ops</div>
+      <div class="service-desc">Ad creative planning & testing, SEO/content strategy (Ahrefs/SEMrush), and content calendars — powered by Canva/Figma with data-backed creative performance analysis.</div>
+      <div class="service-tags"><span class="service-tag">Creative</span><span class="service-tag">SEO</span><span class="service-tag">Content Calendar</span><span class="service-tag">Figma</span></div>
     </div>
   </div>
 </section>
@@ -372,33 +382,73 @@
   <h2 class="section-title">Results That <span class="dim">Speak for Themselves</span></h2>
   <div class="case-grid">
     <div class="case-card reveal">
-      <div class="case-tag">SaaS / D2C</div>
-      <div class="case-title">Scaling to 10X Revenue Growth</div>
-      <div class="case-problem">Growth plateau with inefficient ad spend and no structured acquisition strategy.</div>
+      <div class="case-tag">SaaS / Lead Gen</div>
+      <div class="case-title">Lead Flow Plateau → 250% SQL Growth</div>
+      <div class="case-problem">Mid-market SaaS with stagnant lead flow, high MQL cost, and inefficient ad spend across Google & LinkedIn.</div>
       <div class="case-results">
-        <div class="case-result-item">10X revenue growth achieved</div>
-        <div class="case-result-item">CAC reduced significantly</div>
-        <div class="case-result-item">Scalable acquisition engine built</div>
+        <div class="case-result-item">SQLs ↑ 250% (50 → 175/mo)</div>
+        <div class="case-result-item">CAC ↓ 38% in 3 months</div>
+        <div class="case-result-item">MQLs ↑ 3.5× via $50K spend</div>
       </div>
     </div>
     <div class="case-card reveal rd1">
-      <div class="case-tag">Performance</div>
-      <div class="case-title">$10M+ Ad Spend Optimization</div>
-      <div class="case-problem">High spend but poor efficiency — money burning with no structured optimization loops.</div>
+      <div class="case-tag">D2C / E-Commerce</div>
+      <div class="case-title">Stagnant Sales → 3× Monthly Revenue</div>
+      <div class="case-problem">Online retail brand with flat sales and poorly optimised Meta & Google Shopping campaigns.</div>
       <div class="case-results">
-        <div class="case-result-item">$10M+ budgets managed efficiently</div>
-        <div class="case-result-item">ROAS improved significantly</div>
-        <div class="case-result-item">Wasted spend eliminated</div>
+        <div class="case-result-item">Revenue ↑ 3× ($20K → $60K/mo)</div>
+        <div class="case-result-item">ROAS 2.0× → 5.8× in 4 months</div>
+        <div class="case-result-item">AOV ↑ 20% via upsell funnels</div>
       </div>
     </div>
     <div class="case-card reveal rd2">
-      <div class="case-tag">B2B / SaaS</div>
-      <div class="case-title">B2B SaaS Lead Generation</div>
-      <div class="case-problem">Low-quality leads and inconsistent pipeline from LinkedIn and Google campaigns.</div>
+      <div class="case-tag">B2B Tech</div>
+      <div class="case-title">Qualified Leads ↑ 400%, Pipeline +$200K</div>
+      <div class="case-problem">Tech services firm with few qualified leads, long sales cycles, and poor LinkedIn ad performance.</div>
       <div class="case-results">
-        <div class="case-result-item">Lead quality improved dramatically</div>
-        <div class="case-result-item">CPL reduced</div>
-        <div class="case-result-item">Predictable pipeline built</div>
+        <div class="case-result-item">MQLs ↑ 400% (40 → 200/mo)</div>
+        <div class="case-result-item">Sales pipeline value +$200K</div>
+        <div class="case-result-item">CAC ↓ 45% in 3 months</div>
+      </div>
+    </div>
+    <div class="case-card reveal">
+      <div class="case-tag">EdTech</div>
+      <div class="case-title">US Market Launch → 200% Enrollment Growth</div>
+      <div class="case-problem">EdTech startup with low course enrollments, poor US reach, and high CPA on YouTube & Google Ads.</div>
+      <div class="case-results">
+        <div class="case-result-item">Trial sign-ups ↑ 200% (100 → 300/mo)</div>
+        <div class="case-result-item">CPA ↓ 30% in 90 days</div>
+        <div class="case-result-item">Conversion rate ↑ 65%</div>
+      </div>
+    </div>
+    <div class="case-card reveal rd1">
+      <div class="case-tag">Mobility / App</div>
+      <div class="case-title">App Installs ↑ 250%, Active Users 3×</div>
+      <div class="case-problem">Mobility app with low activation rates and rising cost per install despite high install volume.</div>
+      <div class="case-results">
+        <div class="case-result-item">Installs ↑ 250% (2K → 5K/mo)</div>
+        <div class="case-result-item">Cost per Install ↓ 40%</div>
+        <div class="case-result-item">Active users ↑ 3× in 2 months</div>
+      </div>
+    </div>
+    <div class="case-card reveal rd2">
+      <div class="case-tag">Real Estate / PropTech</div>
+      <div class="case-title">CPL ↓ 55%, Sales Deals ↑ 4×</div>
+      <div class="case-problem">PropTech marketplace with low inquiry volume and poor lead quality from generic ad campaigns.</div>
+      <div class="case-results">
+        <div class="case-result-item">Qualified inquiries ↑ 180% (20 → 56/mo)</div>
+        <div class="case-result-item">CPL ↓ 55% in 3 months</div>
+        <div class="case-result-item">Sales deals closed ↑ 4×</div>
+      </div>
+    </div>
+    <div class="case-card reveal rd3">
+      <div class="case-tag">FinTech / App</div>
+      <div class="case-title">Sign-ups ↑ 3.5×, CAC ↓ 35% in 4 Months</div>
+      <div class="case-problem">FinTech app with slow user growth, high CAC, and poor attribution across Google UAC & LinkedIn.</div>
+      <div class="case-results">
+        <div class="case-result-item">Sign-ups ↑ 3.5× with $50K spend</div>
+        <div class="case-result-item">CAC ↓ 35% via attribution fixes</div>
+        <div class="case-result-item">ROAS (trial→paid) ↑ 220%</div>
       </div>
     </div>
   </div>
@@ -406,51 +456,51 @@
 
 <!-- WHY WORK WITH ME -->
 <section style="background:var(--surf-alt);">
-  <div class="section-tag">Why Work With Me</div>
-  <h2 class="section-title">Not Just a Marketer —<br/><span class="dim">A Growth Partner</span></h2>
+  <div class="section-tag">Why Work With 4XG</div>
+  <h2 class="section-title">Not Just a Agency &mdash;<br/><span class="dim">A Growth Partner</span></h2>
   <div class="why-grid">
     <div class="why-list">
       <div class="why-item reveal">
         <div class="why-icon">🏆</div>
         <div>
-          <div class="why-item-title">Proven Track Record Across Industries</div>
-          <div class="why-item-desc">Deep experience across SaaS, D2C, and B2B—industries that demand very different growth motions.</div>
+          <div class="why-item-title">Revenue-Focused, Not Vanity Metrics</div>
+          <div class="why-item-desc">Every decision ties to CAC, ROAS, and LTV:CAC ratio. We aim for ≥ 3:1 LTV:CAC — meaning customers yield triple their acquisition cost over time.</div>
         </div>
       </div>
       <div class="why-item reveal rd1">
         <div class="why-icon">📊</div>
         <div>
-          <div class="why-item-title">0 → Series C Experience</div>
-          <div class="why-item-desc">Worked across every startup stage—from early traction to scaling past Series B & C funding rounds.</div>
+          <div class="why-item-title">Data-First. Analytics-Led.</div>
+          <div class="why-item-desc">GA4, GTM, BigQuery, multi-touch attribution — we combine analytics, creative testing, and full-funnel strategy to deliver outcomes, not just clicks.</div>
         </div>
       </div>
       <div class="why-item reveal rd2">
         <div class="why-icon">💡</div>
         <div>
-          <div class="why-item-title">Business Outcomes, Not Vanity Metrics</div>
-          <div class="why-item-desc">Every decision is tied to revenue, CAC, and ROAS. Not impressions, not engagement—actual business impact.</div>
+          <div class="why-item-title">0 → Series C Stage Experience</div>
+          <div class="why-item-desc">Worked across every startup stage — from early traction and pre-PMF to scaling past Series B & C — across SaaS, D2C, B2B, EdTech, Mobility & PropTech.</div>
         </div>
       </div>
       <div class="why-item reveal rd3">
         <div class="why-icon">🌐</div>
         <div>
-          <div class="why-item-title">Deep Paid + Funnel + Analytics Expertise</div>
-          <div class="why-item-desc">Full-stack growth competency—from top-of-funnel acquisition to conversion optimization and attribution.</div>
+          <div class="why-item-title">Full-Stack Growth Competency</div>
+          <div class="why-item-desc">Paid acquisition → funnel CRO → attribution → analytics. One partner, the complete picture — hands-on execution with proven global results.</div>
         </div>
       </div>
     </div>
     <div class="why-visual reveal rd1">
       <div class="why-stat">
         <div class="why-stat-num">$10<span>M+</span></div>
-        <div class="why-stat-label">Annual Ad Spend Managed</div>
+        <div class="why-stat-label">Annual Ad Budgets Managed</div>
       </div>
       <div class="why-stat">
-        <div class="why-stat-num">10<span>+</span></div>
-        <div class="why-stat-label">High-Growth Brands Worked With</div>
+        <div class="why-stat-num">CAC<span> ↓40%</span></div>
+        <div class="why-stat-label">Average Cost Reduction Achieved</div>
       </div>
       <div class="why-stat" style="margin-bottom:0;">
-        <div class="why-stat-num">10<span>×</span></div>
-        <div class="why-stat-label">Growth Delivered for Multiple Clients</div>
+        <div class="why-stat-num">3<span>:1+</span></div>
+        <div class="why-stat-label">Target LTV:CAC Ratio for All Clients</div>
       </div>
     </div>
   </div>
@@ -459,29 +509,29 @@
 <!-- MY APPROACH -->
 <section class="approach-bg">
   <div style="text-align:center;margin-bottom:0;">
-    <div class="section-tag" style="margin:0 auto 20px;">My Approach</div>
-    <h2 class="section-title">How I Build<br/><span class="dim">Scalable Growth Systems</span></h2>
+    <div class="section-tag" style="margin:0 auto 20px;">Our Approach</div>
+    <h2 class="section-title">How We Build<br/><span class="dim">Scalable Growth Systems</span></h2>
   </div>
   <div class="approach-grid">
     <div class="approach-step reveal">
       <div class="step-num">01</div>
-      <div class="step-title">Diagnose</div>
-      <div class="step-desc">Identify bottlenecks in your ads, funnel, and targeting. No assumptions—data-led from day one.</div>
+      <div class="step-title">Kickoff & Audit</div>
+      <div class="step-desc">Deep-dive into your ad accounts, analytics, funnel, and conversion data. Deliver a full audit report highlighting gaps: tracking, funnel leaks, budget waste.</div>
     </div>
     <div class="approach-step reveal rd1">
       <div class="step-num">02</div>
-      <div class="step-title">Strategize</div>
-      <div class="step-desc">Build a full-funnel growth roadmap tailored to your market stage and revenue goals.</div>
+      <div class="step-title">Strategy & Roadmap</div>
+      <div class="step-desc">Craft a full-funnel growth plan — channel mix, budgets, targeting, messaging. You approve the strategic roadmap before we touch anything.</div>
     </div>
     <div class="approach-step reveal rd2">
       <div class="step-num">03</div>
-      <div class="step-title">Execute</div>
-      <div class="step-desc">Launch, test, and iterate fast. Creative testing, campaign architecture, and conversion loops—all at once.</div>
+      <div class="step-title">Launch & Test</div>
+      <div class="step-desc">Implement tracking (GA4/GTM), build campaign structures and landing page variants. Launch ads and CRO tests — monitor daily, optimise fast.</div>
     </div>
     <div class="approach-step reveal rd3">
       <div class="step-num">04</div>
-      <div class="step-title">Scale</div>
-      <div class="step-desc">Double down on profitable channels. Remove waste. Build the engine that scales without breaking.</div>
+      <div class="step-title">Optimise & Scale</div>
+      <div class="step-desc">Double down on winning channels. Expand to new audiences. Deliver weekly updates + monthly performance reviews tracking CAC, ROAS & LTV:CAC.</div>
     </div>
   </div>
 </section>
@@ -489,12 +539,13 @@
 <!-- FREE AUDIT CTA -->
 <div class="audit-section" id="audit">
   <div>
-    <h2 class="audit-title">Get a <span class="thin">Free</span><br/>Growth Audit</h2>
-    <p class="audit-sub">A no-obligation deep-dive into your acquisition engine. You'll walk away with clarity.</p>
+    <h2 class="audit-title">Audit My <span class="thin">Marketing</span><br/>for Free</h2>
+    <p class="audit-sub">A no-obligation deep-dive into your acquisition engine — ad accounts, funnel, tracking & attribution. You'll walk away with 3–5 actionable growth opportunities.</p>
     <div class="audit-perks">
       <div class="audit-perk">Ad account audit (Google / Meta / LinkedIn)</div>
-      <div class="audit-perk">Funnel & landing page analysis</div>
-      <div class="audit-perk">3–5 actionable growth opportunities</div>
+      <div class="audit-perk">Funnel & landing page analysis with CRO gaps</div>
+      <div class="audit-perk">Attribution & GA4 tracking health check</div>
+      <div class="audit-perk">3–5 specific quick-win growth opportunities</div>
     </div>
   </div>
   <div class="audit-form">
@@ -523,11 +574,11 @@
       </div>
     </div>
     <div class="about-content reveal rd1">
-      <div class="section-tag">About</div>
-      <h2 class="section-title">Growth Marketer Focused on<br/><span class="dim">Real Business Impact</span></h2>
-      <p class="about-text">I'm a growth and performance marketer with experience managing over <strong>$10M in annual ad spend</strong> and scaling businesses across SaaS, D2C, and B2B industries.</p>
-      <p class="about-text">I've worked with companies ranging from early-stage startups to Series B & C organizations—helping them unlock growth through data-driven marketing, strong fundamentals, and scalable systems.</p>
-      <p class="about-text">My focus is simple: build predictable, efficient, and high-impact growth engines.</p>
+      <div class="section-tag">About 4XG</div>
+      <h2 class="section-title">Data-First Growth Partner for<br/><span class="dim">Ambitious Brands</span></h2>
+      <p class="about-text">4XG is a growth marketing consultancy combining <strong>analytics, creative testing, and full-funnel strategy</strong> to deliver business outcomes — not just clicks. We've managed over <strong>$10M in ad budgets</strong> and delivered 10× growth for clients across SaaS, D2C, B2B, EdTech, Mobility & PropTech.</p>
+      <p class="about-text">We've worked with companies from early-stage pre-PMF startups to Series B & C organisations — helping them build scalable acquisition engines, reduce CAC, and achieve a <strong>≥ 3:1 LTV:CAC ratio</strong> for sustainable, profitable growth.</p>
+      <p class="about-text">Our focus: data-first, revenue-focused, hands-on execution — with full transparency at every stage through dashboards, weekly updates & monthly performance reviews.</p>
       <div class="about-brands">
         <div class="about-brands-label">Brands I've Worked With</div>
         <div class="brands-wrap">
@@ -549,10 +600,10 @@
 <!-- FINAL CTA -->
 <div class="final-cta" id="contact">
   <div class="section-tag" style="margin:0 auto 24px;">Ready to Scale?</div>
-  <h2>Scale Profitably.<br/><span style="color:var(--muted);font-style:italic;font-weight:300;">Not Blindly.</span></h2>
-  <p>If you're serious about scaling revenue, reducing CAC, and building a predictable growth engine—let's talk. No fluff, no vanity metrics.</p>
+  <h2>Scale My <br/><span style="color:var(--muted);font-style:italic;font-weight:300;">Revenue, Not Just Ads.</span></h2>
+  <p>If you're serious about scaling revenue, reducing CAC, and achieving a ≥ 3:1 LTV:CAC ratio — let's talk. No fluff, no vanity metrics. Just a data-driven growth partner focused on measurable outcomes.</p>
   <div class="final-cta-btns">
-    <a href="https://calendly.com" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
+    <a href="https://calendly.com" target="_blank" rel="noopener" class="btn-primary">Schedule a Strategy Call</a>
     <a href="#audit" class="btn-dark">Get Free Audit</a>
   </div>
 </div>
@@ -561,7 +612,7 @@
 <footer>
   <div class="footer-brand">
     <a href="#" class="nav-logo">4<span>XG</span></a>
-    <p>Growth & Performance Marketing for brands serious about building scalable acquisition engines.</p>
+    <p>4XG is a growth marketing consultancy: $10M+ ad budgets managed, 10× client growth, CAC ↓40%. Google Ads, Meta Ads, GA4 & CRO — measurable results for SaaS, D2C, B2B & EdTech brands.</p>
     <div class="footer-socials">
       <a href="#" class="footer-social">𝕏</a>
       <a href="#" class="footer-social">in</a>
@@ -570,10 +621,11 @@
   <div>
     <div class="footer-col-title">Services</div>
     <ul class="footer-links">
-      <li><a href="#services">Performance Marketing</a></li>
-      <li><a href="#services">Funnel Optimization</a></li>
-      <li><a href="#services">Global Growth</a></li>
-      <li><a href="#services">Analytics Systems</a></li>
+      <li><a href="#services">Paid Media Campaigns</a></li>
+      <li><a href="#services">Funnel & CRO</a></li>
+      <li><a href="#services">Analytics & Insights</a></li>
+      <li><a href="#services">Go-To-Market Strategy</a></li>
+      <li><a href="#services">Creative & Content Ops</a></li>
     </ul>
   </div>
   <div>
@@ -587,7 +639,7 @@
   </div>
   <div>
     <div class="footer-col-title">Get in Touch</div>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;font-weight:500;line-height:1.6;">Ready to scale? Let's build your growth engine together.</p>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:20px;font-weight:500;line-height:1.6;">Ready to scale profitably? Let's build your data-driven growth engine together.</p>
     <a href="#audit" class="btn-primary" style="font-size:13px;padding:14px 28px;box-shadow:none;display:inline-flex;">Get Free Audit →</a>
   </div>
 </footer>

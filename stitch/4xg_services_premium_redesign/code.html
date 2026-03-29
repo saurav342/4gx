@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#efe0ff",
+              "outline": "#958da1",
+              "on-secondary": "#313030",
+              "tertiary": "#00dbe9",
+              "inverse-on-surface": "#303033",
+              "background": "#131316",
+              "on-secondary-fixed": "#1c1b1b",
+              "surface-tint": "#d6baff",
+              "on-background": "#e4e1e6",
+              "outline-variant": "#4a4455",
+              "primary-fixed-dim": "#d6baff",
+              "secondary": "#c8c6c5",
+              "primary-fixed": "#ecdcff",
+              "tertiary-container": "#00727a",
+              "on-error": "#690005",
+              "error": "#ffb4ab",
+              "on-primary-fixed-variant": "#5f00c0",
+              "surface-variant": "#353438",
+              "primary-container": "#813de2",
+              "on-secondary-container": "#bab8b7",
+              "on-tertiary-fixed-variant": "#004f54",
+              "on-tertiary": "#00363a",
+              "on-secondary-fixed-variant": "#474646",
+              "inverse-surface": "#e4e1e6",
+              "on-primary": "#420089",
+              "on-error-container": "#ffdad6",
+              "error-container": "#93000a",
+              "secondary-fixed-dim": "#c8c6c5",
+              "surface-container-high": "#2a2a2d",
+              "inverse-primary": "#7832d9",
+              "secondary-fixed": "#e5e2e1",
+              "on-surface-variant": "#ccc3d8",
+              "tertiary-fixed-dim": "#00dbe9",
+              "on-primary-fixed": "#280057",
+              "surface-container-lowest": "#0e0e11",
+              "surface": "#131316",
+              "on-tertiary-container": "#91f5ff",
+              "on-surface": "#e4e1e6",
+              "surface-dim": "#131316",
+              "surface-container": "#1f1f22",
+              "primary": "#d6baff",
+              "secondary-container": "#4a4949",
+              "on-tertiary-fixed": "#002022",
+              "tertiary-fixed": "#7df4ff",
+              "surface-bright": "#39393c",
+              "surface-container-highest": "#353438",
+              "surface-container-low": "#1b1b1e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .kinetic-gradient {
+        background: linear-gradient(135deg, #d6baff 0%, #813de2 100%);
+      }
+      .ghost-border {
+        border: 1px solid rgba(74, 68, 85, 0.15);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131316]/70 backdrop-blur-xl shadow-[0_32px_64px_rgba(14,14,17,0.4)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-white uppercase font-headline">4XG</div>
+<div class="hidden md:flex gap-10 font-['Manrope'] font-bold tracking-tight text-sm">
+<a class="text-white border-b-2 border-[#7C3AED] pb-1" href="#">Services</a>
+<a class="text-[#94a3b8] hover:text-white transition-colors" href="#">Case Studies</a>
+<a class="text-[#94a3b8] hover:text-white transition-colors" href="#">About</a>
+</div>
+<button class="kinetic-gradient text-on-primary-container px-6 py-2.5 rounded-full font-headline font-bold text-sm scale-95 active:scale-90 transition-transform shadow-[0_0_20px_rgba(124,58,237,0.2)]">
+                Get a Free Audit
+            </button>
+</div>
+<div class="bg-gradient-to-b from-[#1c1c21] to-transparent h-px w-full absolute bottom-0"></div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-8 mb-24 md:mb-32">
+<div class="flex flex-col md:flex-row items-end gap-12 md:gap-20">
+<div class="md:w-3/5">
+<span class="text-tertiary font-label text-xs font-bold tracking-[0.2em] uppercase mb-6 block">Performance Infrastructure</span>
+<h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-tight text-white mb-8">
+                        End-to-End Growth &amp; Performance Marketing
+                    </h1>
+</div>
+<div class="md:w-2/5 pb-4">
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-md">
+                        We build high-velocity engines that turn capital into market dominance through ruthless data precision and creative excellence.
+                    </p>
+</div>
+</div>
+<div class="mt-16 w-full h-[500px] rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="Modern high-tech data command center with glowing holographic interface and dark sleek finishes in a premium office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsjvgXDiSA1L1BDpTHhDegpnU27_WLuek9DnALwB3ZFPQw2L6gUyeP6_ZzQlt074ls9eCLLlx-44sWA-fkWMTQ_DlMMEvT3jDMZuUtvRTUT4r6MQjzs4URcJXIi9ALIOWpLKFC8RO0eD5un_6PFfJ_8c6AJDj2LXu5qoRi5dCu08V_KDIp89oZggSLshH86fRXm8WFcohnoXBTlIaRZiMfWISngpcyuHvsVPKLbOnX4XGal5_XNhanwDgvh-Q1fkJT0a6IVGalb5OT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+</section>
+<!-- Section 1: Performance Marketing -->
+<section class="max-w-[1440px] mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<div class="md:col-span-4 sticky top-32">
+<h2 class="font-headline text-3xl font-bold text-white mb-6">Performance Marketing at Scale</h2>
+<p class="text-on-surface-variant mb-8">Managing multi-million dollar monthly budgets across global channels with surgical precision.</p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface-container-highest px-4 py-1.5 rounded-md text-xs font-bold font-label tracking-wider text-tertiary uppercase">Google Ads</span>
+<span class="bg-surface-container-highest px-4 py-1.5 rounded-md text-xs font-bold font-label tracking-wider text-tertiary uppercase">Meta Ads</span>
+<span class="bg-surface-container-highest px-4 py-1.5 rounded-md text-xs font-bold font-label tracking-wider text-tertiary uppercase">LinkedIn Ads</span>
+</div>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">trending_up</span>
+<h3 class="text-xl font-bold text-white mb-4">Paid Search Excellence</h3>
+<p class="text-on-surface-variant leading-relaxed">Dominating high-intent search queries through advanced bidding logic and semantic keyword clustering.</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">dynamic_feed</span>
+<h3 class="text-xl font-bold text-white mb-4">Social Scaling</h3>
+<p class="text-on-surface-variant leading-relaxed">Creative-first testing frameworks on Meta and TikTok that break through the noise and drive direct action.</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 md:col-span-2 flex flex-col md:flex-row gap-8 items-center">
+<div class="md:w-1/2">
+<h3 class="text-xl font-bold text-white mb-4">The Multi-Million Logic</h3>
+<p class="text-on-surface-variant leading-relaxed">We don't just spend; we invest. Our management systems are built for enterprise-level stability while maintaining startup-level agility.</p>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4 w-full">
+<div class="bg-surface-container-highest p-4 rounded-lg text-center">
+<div class="text-tertiary font-headline text-2xl font-black">$50M+</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-widest mt-1">Managed Spend</div>
+</div>
+<div class="bg-surface-container-highest p-4 rounded-lg text-center">
+<div class="text-tertiary font-headline text-2xl font-black">4.8x</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-widest mt-1">Average ROAS</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Funnel & CRO (Bento Grid) -->
+<section class="bg-surface-container-low py-32 mb-32">
+<div class="max-w-[1440px] mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-extrabold text-white tracking-tight mb-4">Funnel &amp; Conversion Optimization</h2>
+<p class="text-on-surface-variant text-xl">Turning paid traffic into predictable revenue.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 h-full md:h-[600px]">
+<div class="bg-surface-container-highest p-10 rounded-xl md:row-span-2 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-tertiary text-5xl mb-8">science</span>
+<h3 class="text-2xl font-bold text-white mb-4 leading-tight">Ruthless A/B Testing</h3>
+<p class="text-on-surface-variant leading-relaxed">We test everything from headline copy to entire checkout flows, ensuring every click has the highest probability of conversion.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/20">
+<div class="text-4xl font-black text-white">+42%</div>
+<div class="text-xs uppercase tracking-[0.2em] text-tertiary font-bold mt-2">Avg Conversion Lift</div>
+</div>
+</div>
+<div class="bg-surface-container-highest p-10 rounded-xl md:col-span-2 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-2xl font-bold text-white mb-4">Landing Page Engineering</h3>
+<p class="text-on-surface-variant leading-relaxed max-w-md">High-performance landing pages that load in under 1.5 seconds and are psychologically optimized for your specific ICP.</p>
+</div>
+<img class="absolute right-0 bottom-0 w-1/2 opacity-20 grayscale pointer-events-none" data-alt="Abstract minimalist representation of a sales funnel with glowing light lines in deep purple and cyan colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1A3pBzm1uM26Hh8rB5FOcs1PDIlekUKfE4sA53vACiXgTKCmWAFtXjSgr2gm-wvqVQl_N-JO_ewGmw8DMG_KZ6OnFNg_PFbhr_FlbDGqoZGmU5jK-vsuSmsF5EKnu-N_e4zbBFYnTJDtZFw5Z75NRd8_uKdxYFbE75NnJm8NKDrPoxWgGkQWJ3r6Qrtdwq57vg649MtRu5ZUXiF20Cv9UNUBBdKDZGlcBft0YUhYMTE8WGvvN7Wk8gOMJUMPRRR4XFfwWWtxCwDYN"/>
+</div>
+<div class="bg-surface-container-highest p-10 rounded-xl">
+<h3 class="text-xl font-bold text-white mb-2">Behavioral Analysis</h3>
+<p class="text-on-surface-variant text-sm">Heatmapping and session recording to identify where users are dropping off.</p>
+</div>
+<div class="bg-surface-container-highest p-10 rounded-xl">
+<h3 class="text-xl font-bold text-white mb-2">Copywriting</h3>
+<h3 class="text-xl font-bold text-white mb-2">Direct Response Copy</h3>
+<p class="text-on-surface-variant text-sm">Persuasive messaging that speaks directly to the pain points and desires of your audience.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Global Growth -->
+<section class="max-w-[1440px] mx-auto px-8 mb-32">
+<div class="flex flex-col md:flex-row gap-20 items-center">
+<div class="md:w-1/2">
+<img class="rounded-xl ghost-border p-2" data-alt="Digital representation of the global earth showing network connections in glowing blue and violet lights against dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaMKKTdOQZq8l-qqRNnqDPQRsGrmnixweFZz8jpMixQ0UF0-XBuOWUvDY-v9DWpt7RreaAZaOZt1bHMiDL3moJ3ub4NOKbuU9M9aEaI_KQ5pQXr9xCr9Jh2fuaiJLqAYSQx0SqKDCyR2r4QMhqAdJ-8N00xDOgM_5Ua1t2k6P8ijpxzj-HWyPMYuWJ4oWPO2pOs7fTPvcTjuwpo_I2OkeQDc50_cBZeaaHZ4zcn3virE893kWs1RxmPwgzd-TbF_Fjc1uEhVRZoKB9"/>
+</div>
+<div class="md:w-1/2">
+<span class="text-primary font-label text-xs font-bold tracking-[0.2em] uppercase mb-6 block">Expansion Protocol</span>
+<h2 class="font-headline text-4xl font-extrabold text-white mb-8">Global Growth &amp; GTM Strategy</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary">public</span>
+<div>
+<h4 class="text-white font-bold">US &amp; Europe Focus</h4>
+<p class="text-on-surface-variant text-sm">Deep expertise in navigating the distinct market dynamics of the North American and European sectors.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary">target</span>
+<div>
+<h4 class="text-white font-bold">Audience Targeting</h4>
+<p class="text-on-surface-variant text-sm">Granular persona development that goes beyond demographics into psychographic motivators.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary">translate</span>
+<div>
+<h4 class="text-white font-bold">Funnel Localization</h4>
+<p class="text-on-surface-variant text-sm">Adapting creative and messaging to resonate with local cultural nuances without losing brand integrity.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 4: Analytics -->
+<section class="max-w-[1440px] mx-auto px-8 mb-32">
+<div class="bg-surface-container-high p-12 md:p-20 rounded-3xl relative overflow-hidden">
+<div class="relative z-10 max-w-3xl">
+<h2 class="font-headline text-4xl font-extrabold text-white mb-6">Analytics &amp; Growth Systems</h2>
+<p class="text-xl text-on-surface-variant mb-12">"No guesswork—only measurable growth." Our infrastructure provides full-funnel visibility from first-touch to lifetime value.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<div class="font-bold text-white mb-2">Attribution &amp; Tracking</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mb-4">
+<div class="w-full h-full kinetic-gradient"></div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Multi-touch attribution models that reveal the true value of every marketing dollar spent across channels.</p>
+</div>
+<div>
+<div class="font-bold text-white mb-2">Data-Driven Reporting</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden mb-4">
+<div class="w-full h-full kinetic-gradient"></div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Real-time dashboards that translate complex metrics into actionable business intelligence.</p>
+</div>
+</div>
+</div>
+<!-- Visual Background element -->
+<div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-primary/10 to-transparent pointer-events-none hidden md:block"></div>
+</div>
+</section>
+<!-- Deliverables & KPIs Section -->
+<section class="max-w-[1440px] mx-auto px-8 mb-32">
+<div class="text-center mb-16">
+<h2 class="font-headline text-3xl font-bold text-white mb-4 tracking-tight">The KPI Manifesto</h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-px bg-outline-variant/20 rounded-xl overflow-hidden ghost-border">
+<div class="bg-surface p-8 text-center">
+<div class="text-tertiary font-headline text-4xl font-black mb-2">ROAS</div>
+<div class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Efficiency</div>
+</div>
+<div class="bg-surface p-8 text-center">
+<div class="text-tertiary font-headline text-4xl font-black mb-2">CAC</div>
+<div class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Unit Economics</div>
+</div>
+<div class="bg-surface p-8 text-center">
+<div class="text-tertiary font-headline text-4xl font-black mb-2">LTV</div>
+<div class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Sustainability</div>
+</div>
+<div class="bg-surface p-8 text-center">
+<div class="text-tertiary font-headline text-4xl font-black mb-2">MER</div>
+<div class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Holistic Growth</div>
+</div>
+</div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h5 class="text-white font-bold mb-1">Weekly Deep-Dives</h5>
+<p class="text-sm text-on-surface-variant">Strategic review of performance data and upcoming growth sprints.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h5 class="text-white font-bold mb-1">Live Reporting</h5>
+<p class="text-sm text-on-surface-variant">24/7 access to your growth dashboard and attribution engine.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h5 class="text-white font-bold mb-1">Creative Production</h5>
+<p class="text-sm text-on-surface-variant">Endless supply of ad variants based on winning performance data.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="max-w-[1000px] mx-auto px-8 text-center py-20 bg-surface-container-low rounded-3xl mb-32 border-2 border-primary/20">
+<h2 class="font-headline text-4xl md:text-5xl font-black text-white mb-8 tracking-tighter">Ready to Build Your Growth Engine?</h2>
+<p class="text-on-surface-variant text-lg mb-12 max-w-xl mx-auto">Get a personalized audit of your current marketing infrastructure and a roadmap for multi-channel dominance.</p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="kinetic-gradient text-on-primary-container px-10 py-5 rounded-full font-headline font-extrabold text-lg transition-transform hover:scale-105 active:scale-95 shadow-[0_20px_40px_rgba(124,58,237,0.3)]">
+                    Audit My Marketing
+                </button>
+<button class="ghost-border text-white px-10 py-5 rounded-full font-headline font-extrabold text-lg hover:bg-white/5 transition-all">
+                    View Case Studies
+                </button>
+</div>
+<p class="mt-8 text-xs text-on-surface-variant uppercase tracking-[0.3em]">Free 30-minute growth consultation • No commitment</p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0c0c0e] w-full py-20 px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto font-['Inter'] text-sm tracking-wide">
+<div>
+<span class="text-xl font-black text-white mb-6 block font-headline">4XG</span>
+<p class="text-[#4a4455] leading-relaxed">Building the next generation of performance authority through data and design.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">Performance Ads</a></li>
+<li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">CRO &amp; Funnels</a></li>
+<li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">Analytics Setup</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">Case Studies</a></li>
+<li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">About</a></li>
+<li><a class="text-[#4a4455] hover:text-[#00dbe9] transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contact</h4>
+<p class="text-[#4a4455] mb-4">growth@4xg.agency</p>
+<div class="flex gap-4">
+<a class="text-[#4a4455] hover:text-[#7C3AED]" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-[#4a4455] hover:text-[#7C3AED]" href="#"><span class="material-symbols-outlined">hub</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-outline-variant/10 text-center text-[#4a4455]">
+            © 2024 4XG Kinetic Authority. All rights reserved.
+        </div>
+</footer>
+</body></html>
